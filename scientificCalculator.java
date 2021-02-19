@@ -7,7 +7,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-class basicValues {                                     //Super class
+abstract class basicValues {                                     //Super class
 	static protected JTextField textField;
 	static double firstNum=0;
 	static double secondNum=0;
@@ -35,6 +35,9 @@ class basicValues {                                     //Super class
 		String number=textField.getText()+name.getText();
 		textField.setText(number);
 	}
+	
+	abstract void doOperation(String operator);
+	abstract void doOperation(JButton operator);
 }
 
 class Operation extends basicValues {                  //Sub class 1
