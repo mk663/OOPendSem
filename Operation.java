@@ -1,7 +1,7 @@
 import javax.swing.JButton;
 
 class Operation extends basicValues {                  //Sub class 1
-	void doOperation(JButton operator) {
+	final void doOperation(JButton operator) {
 		
 		switch(operator.getText()) {
 		case "+":
