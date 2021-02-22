@@ -253,224 +253,224 @@ public class scientificCalculator extends trigonometry{
 		btnNewButton_a5.setBounds(241, 207, 63, 49);
 		frame.getContentPane().add(btnNewButton_a5);
 		
-		JButton btnNewButton_11_8_1_4 = new JButton("ln");
-		btnNewButton_11_8_1_4.addActionListener(new ActionListener() {
+		JButton btnNewButton_l4 = new JButton("ln");
+		btnNewButton_l4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=getNum();
 				doOperation("ln");
 			}
 		});
-		btnNewButton_11_8_1_4.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_8_1_4.setBounds(95, 146, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_1_4);
+		btnNewButton_l4.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_l4.setBounds(95, 146, 63, 49);
+		frame.getContentPane().add(btnNewButton_l4);
 		
-		JButton btnNewButton_11_8_1 = new JButton("\u221A");
-		btnNewButton_11_8_1.addActionListener(new ActionListener() {
+		JButton btnNewButton_p6 = new JButton("\u221A");
+		btnNewButton_p6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=getNum();
 				doOperation("sqrt");
 			}
 		});
-		btnNewButton_11_8_1.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_8_1.setBounds(168, 207, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_1);
+		btnNewButton_p6.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_p6.setBounds(168, 207, 63, 49);
+		frame.getContentPane().add(btnNewButton_p6);
 		
-		JButton btnNewButton_11_8_1_5 = new JButton("log");
-		btnNewButton_11_8_1_5.addActionListener(new ActionListener() {
+		JButton btnNewButton_l3 = new JButton("log");
+		btnNewButton_l3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=getNum();
 				doOperation("log");
 			}
 		});
-		btnNewButton_11_8_1_5.setFont(new Font("Cambria", Font.PLAIN, 18));
-		btnNewButton_11_8_1_5.setBounds(95, 207, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_1_5);
+		btnNewButton_l3.setFont(new Font("Cambria", Font.PLAIN, 18));
+		btnNewButton_l3.setBounds(95, 207, 63, 49);
+		frame.getContentPane().add(btnNewButton_l3);
 		
-		JButton btnNewButton_11_8_2 = new JButton("x\u00B2");
-		btnNewButton_11_8_2.addActionListener(new ActionListener() {
+		JButton btnNewButton_p5 = new JButton("x\u00B2");
+		btnNewButton_p5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=getNum();
 				doOperation("x^2");
 			}
 		});
-		btnNewButton_11_8_2.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_8_2.setBounds(168, 267, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_2);
+		btnNewButton_p5.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_p5.setBounds(168, 267, 63, 49);
+		frame.getContentPane().add(btnNewButton_p5);
 		
-		JButton btnNewButton_11_8_1_1 = new JButton("log\u2090x");
-		btnNewButton_11_8_1_1.addActionListener(new ActionListener() {
+		JButton btnNewButton_l2 = new JButton("log\u2090x");
+		btnNewButton_l2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=getNum();
-				op=btnNewButton_11_8_1_1;
+				op=btnNewButton_l2;
 			}
 		});
-		btnNewButton_11_8_1_1.setFont(new Font("Cambria", Font.PLAIN, 13));
-		btnNewButton_11_8_1_1.setBounds(95, 267, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_1_1);
+		btnNewButton_l2.setFont(new Font("Cambria", Font.PLAIN, 13));
+		btnNewButton_l2.setBounds(95, 267, 63, 49);
+		frame.getContentPane().add(btnNewButton_l2);
 		
-		JButton btnNewButton_11_8_3 = new JButton("x\u00B3");
-		btnNewButton_11_8_3.addActionListener(new ActionListener() {
+		JButton btnNewButton_p4 = new JButton("x\u00B3");
+		btnNewButton_p4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=getNum();
 				doOperation("x^3");
 			}
 		});
-		btnNewButton_11_8_3.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_8_3.setBounds(168, 327, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_3);
+		btnNewButton_p4.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_p4.setBounds(168, 327, 63, 49);
+		frame.getContentPane().add(btnNewButton_p4);
 		
-		JButton btnNewButton_11_8_1_3 = new JButton("e\u02E3");
-		btnNewButton_11_8_1_3.addActionListener(new ActionListener() {
+		JButton btnNewButton_l1 = new JButton("e\u02E3");
+		btnNewButton_l1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=getNum();
 				doOperation("exp");
 			}
 		});
-		btnNewButton_11_8_1_3.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_8_1_3.setBounds(95, 327, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_1_3);
+		btnNewButton_l1.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_l1.setBounds(95, 327, 63, 49);
+		frame.getContentPane().add(btnNewButton_l1);
 		
-		JButton btnNewButton_11_8_4 = new JButton("x\u02B8");
-		btnNewButton_11_8_4.addActionListener(new ActionListener() {
+		JButton btnNewButton_p2 = new JButton("x\u02B8");
+		btnNewButton_p2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=getNum();
-				op=btnNewButton_11_8_4;
+				op=btnNewButton_p2;
 			}
 		});
-		btnNewButton_11_8_4.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_8_4.setBounds(168, 387, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_4);
+		btnNewButton_p2.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_p2.setBounds(168, 387, 63, 49);
+		frame.getContentPane().add(btnNewButton_p2);
 		
-		JButton btnNewButton_11_8_1_2 = new JButton("2\u02E3");
-		btnNewButton_11_8_1_2.addActionListener(new ActionListener() {
+		JButton btnNewButton_p9 = new JButton("2\u02E3");
+		btnNewButton_p9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=getNum();
 				doOperation("2^x");
 			}
 		});
-		btnNewButton_11_8_1_2.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_8_1_2.setBounds(95, 447, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_1_2);
+		btnNewButton_p9.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_p9.setBounds(95, 447, 63, 49);
+		frame.getContentPane().add(btnNewButton_p9);
 		
-		JButton btnNewButton_11_8_5 = new JButton("x!");
-		btnNewButton_11_8_5.addActionListener(new ActionListener() {
+		JButton btnNewButton_p1 = new JButton("x!");
+		btnNewButton_p1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=getNum();
 				doOperation("xfact");
 			}
 		});
-		btnNewButton_11_8_5.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_8_5.setBounds(168, 447, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_5);
+		btnNewButton_p1.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_p1.setBounds(168, 447, 63, 49);
+		frame.getContentPane().add(btnNewButton_p1);
 		
-		JButton btnNewButton_11_8_1_1_1 = new JButton("rand");
-		btnNewButton_11_8_1_1_1.addActionListener(new ActionListener() {
+		JButton btnNewButton_c3 = new JButton("rand");
+		btnNewButton_c3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				doOperation("random");
 			}
 		});
-		btnNewButton_11_8_1_1_1.setFont(new Font("Cambria", Font.PLAIN, 15));
-		btnNewButton_11_8_1_1_1.setBounds(314, 87, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_1_1_1);
+		btnNewButton_c3.setFont(new Font("Cambria", Font.PLAIN, 15));
+		btnNewButton_c3.setBounds(314, 87, 63, 49);
+		frame.getContentPane().add(btnNewButton_c3);
 		
-		JButton btnNewButton_11_8_6 = new JButton("\u03C0");
-		btnNewButton_11_8_6.addActionListener(new ActionListener() {
+		JButton btnNewButton_c1 = new JButton("\u03C0");
+		btnNewButton_c1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textField.setText(String.valueOf(pi));
 			}
 		});
-		btnNewButton_11_8_6.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_8_6.setBounds(460, 86, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_6);
+		btnNewButton_c1.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_c1.setBounds(460, 86, 63, 49);
+		frame.getContentPane().add(btnNewButton_c1);
 		
-		JButton btnNewButton_11_8_1_6 = new JButton("|x|");
-		btnNewButton_11_8_1_6.addActionListener(new ActionListener() {
+		JButton btnNewButton_p8 = new JButton("|x|");
+		btnNewButton_p8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=getNum();
 				doOperation("mod");
 			}
 		});
-		btnNewButton_11_8_1_6.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_8_1_6.setBounds(387, 146, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_1_6);
+		btnNewButton_p8.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_p8.setBounds(387, 146, 63, 49);
+		frame.getContentPane().add(btnNewButton_p8);
 		
-		JButton btnNewButton_11_5_1 = new JButton("inv");
-		btnNewButton_11_5_1.addActionListener(new ActionListener() {
+		JButton btnNewButton_a6 = new JButton("inv");
+		btnNewButton_a6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=getNum();
 				doOperation("inverse");
 			}
 		});
-		btnNewButton_11_5_1.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_5_1.setBounds(460, 146, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_5_1);
+		btnNewButton_a6.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_a6.setBounds(460, 146, 63, 49);
+		frame.getContentPane().add(btnNewButton_a6);
 		
-		JButton btnNewButton_11_8_6_1 = new JButton("e");
-		btnNewButton_11_8_6_1.addActionListener(new ActionListener() {
+		JButton btnNewButton_c2 = new JButton("e");
+		btnNewButton_c2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textField.setText(String.valueOf(exponent));
 			}
 		});
-		btnNewButton_11_8_6_1.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_8_6_1.setBounds(387, 86, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_6_1);
+		btnNewButton_c2.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_c2.setBounds(387, 86, 63, 49);
+		frame.getContentPane().add(btnNewButton_c2);
 		
-		JButton btnNewButton_11_8_1_2_1 = new JButton("10\u02E3");
-		btnNewButton_11_8_1_2_1.addActionListener(new ActionListener() {
+		JButton btnNewButton_p10 = new JButton("10\u02E3");
+		btnNewButton_p10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=getNum();
 				doOperation("10^x");
 			}
 		});
-		btnNewButton_11_8_1_2_1.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_8_1_2_1.setBounds(95, 387, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_1_2_1);
+		btnNewButton_p10.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_p10.setBounds(95, 387, 63, 49);
+		frame.getContentPane().add(btnNewButton_p10);
 		
-		JButton btnNewButton_11_8_1_2_2 = new JButton(")");
-		btnNewButton_11_8_1_2_2.addActionListener(new ActionListener() {
+		JButton btnNewButton_a8 = new JButton(")");
+		btnNewButton_a8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=previousNum;
 				secondNum=getNum();
 				doOperation(opNow);
 			}
 		});
-		btnNewButton_11_8_1_2_2.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_8_1_2_2.setBounds(314, 146, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_1_2_2);
+		btnNewButton_a8.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_a8.setBounds(314, 146, 63, 49);
+		frame.getContentPane().add(btnNewButton_a8);
 		
-		JButton btnNewButton_11_8_1_2_3 = new JButton("(");
-		btnNewButton_11_8_1_2_3.addActionListener(new ActionListener() {
+		JButton btnNewButton_a7 = new JButton("(");
+		btnNewButton_a7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				previousNum=firstNum;
 				opNow=op;
 			}
 		});
-		btnNewButton_11_8_1_2_3.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_8_1_2_3.setBounds(241, 146, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_1_2_3);
+		btnNewButton_a7.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_a7.setBounds(241, 146, 63, 49);
+		frame.getContentPane().add(btnNewButton_a7);
 		
-		JButton btnNewButton_11_7_1 = new JButton("rad");
-		btnNewButton_11_7_1.addActionListener(new ActionListener() {
+		JButton btnNewButton_t7 = new JButton("rad");
+		btnNewButton_t7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				angle="radian";
 			}
 		});
-		btnNewButton_11_7_1.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_7_1.setBounds(22, 146, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_7_1);
+		btnNewButton_t7.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_t7.setBounds(22, 146, 63, 49);
+		frame.getContentPane().add(btnNewButton_t7);
 		
-		JButton btnNewButton_11_6_1 = new JButton("deg");
-		btnNewButton_11_6_1.addActionListener(new ActionListener() {
+		JButton btnNewButton_t6 = new JButton("deg");
+		btnNewButton_t6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				angle="degree";
 			}
 		});
-		btnNewButton_11_6_1.setFont(new Font("Cambria", Font.PLAIN, 19));
-		btnNewButton_11_6_1.setBounds(22, 207, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_6_1);
+		btnNewButton_t6.setFont(new Font("Cambria", Font.PLAIN, 19));
+		btnNewButton_t6.setBounds(22, 207, 63, 49);
+		frame.getContentPane().add(btnNewButton_t6);
 		
-		JButton btnNewButton_11_8_1_1_2 = new JButton("sin");
-		btnNewButton_11_8_1_1_2.addActionListener(new ActionListener() {
+		JButton btnNewButton_t3 = new JButton("sin");
+		btnNewButton_t3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=getNum();
 				if (angle.equals("degree")) {
@@ -489,12 +489,12 @@ public class scientificCalculator extends trigonometry{
 				type="";
 			}
 		});
-		btnNewButton_11_8_1_1_2.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_8_1_1_2.setBounds(22, 327, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_1_1_2);
+		btnNewButton_t3.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_t3.setBounds(22, 327, 63, 49);
+		frame.getContentPane().add(btnNewButton_t3);
 		
-		JButton btnNewButton_11_8_1_7 = new JButton("cos");
-		btnNewButton_11_8_1_7.addActionListener(new ActionListener() {
+		JButton btnNewButton_t2 = new JButton("cos");
+		btnNewButton_t2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=getNum();
 				if (angle.equals("degree")) {
@@ -515,12 +515,12 @@ public class scientificCalculator extends trigonometry{
 				type="";
 			}
 		});
-		btnNewButton_11_8_1_7.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_8_1_7.setBounds(22, 387, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_1_7);
+		btnNewButton_t2.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_t2.setBounds(22, 387, 63, 49);
+		frame.getContentPane().add(btnNewButton_t2);
 		
-		JButton btnNewButton_11_6_2 = new JButton("tan");
-		btnNewButton_11_6_2.addActionListener(new ActionListener() {
+		JButton btnNewButton_t1 = new JButton("tan");
+		btnNewButton_t1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=getNum();
 				if (angle.equals("degree")) {
@@ -541,72 +541,72 @@ public class scientificCalculator extends trigonometry{
 				type="";
 			}
 		});
-		btnNewButton_11_6_2.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_11_6_2.setBounds(22, 447, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_6_2);
+		btnNewButton_t1.setFont(new Font("Cambria", Font.PLAIN, 20));
+		btnNewButton_t1.setBounds(22, 447, 63, 49);
+		frame.getContentPane().add(btnNewButton_t1);
 		
-		JButton btnNewButton_11_6_1_1 = new JButton("hyp");
-		btnNewButton_11_6_1_1.addActionListener(new ActionListener() {
+		JButton btnNewButton_t5 = new JButton("hyp");
+		btnNewButton_t5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				type="hyperbole";
 			}
 		});
-		btnNewButton_11_6_1_1.setFont(new Font("Cambria", Font.PLAIN, 18));
-		btnNewButton_11_6_1_1.setBounds(22, 267, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_6_1_1);
+		btnNewButton_t5.setFont(new Font("Cambria", Font.PLAIN, 18));
+		btnNewButton_t5.setBounds(22, 267, 63, 49);
+		frame.getContentPane().add(btnNewButton_t5);
 		
-		JButton btnNewButton_11_8_1_1_1_1 = new JButton("[x]");
-		btnNewButton_11_8_1_1_1_1.addActionListener(new ActionListener() {
+		JButton btnNewButton_p7 = new JButton("[x]");
+		btnNewButton_p7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=getNum();
 				doOperation("floor");
 			}
 		});
-		btnNewButton_11_8_1_1_1_1.setFont(new Font("Cambria", Font.PLAIN, 18));
-		btnNewButton_11_8_1_1_1_1.setBounds(168, 146, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_1_1_1_1);
+		btnNewButton_p7.setFont(new Font("Cambria", Font.PLAIN, 18));
+		btnNewButton_p7.setBounds(168, 146, 63, 49);
+		frame.getContentPane().add(btnNewButton_p7);
 		
-		JButton btnNewButton_11_8_1_1_1_2 = new JButton("MR");
-		btnNewButton_11_8_1_1_1_2.addActionListener(new ActionListener() {
+		JButton btnNewButton_m3 = new JButton("MR");
+		btnNewButton_m3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textField.setText(String.valueOf(memory));
 			}
 		});
-		btnNewButton_11_8_1_1_1_2.setFont(new Font("Cambria", Font.PLAIN, 18));
-		btnNewButton_11_8_1_1_1_2.setBounds(95, 87, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_1_1_1_2);
+		btnNewButton_m3.setFont(new Font("Cambria", Font.PLAIN, 18));
+		btnNewButton_m3.setBounds(95, 87, 63, 49);
+		frame.getContentPane().add(btnNewButton_m3);
 		
-		JButton btnNewButton_11_8_6_1_1 = new JButton("M+");
-		btnNewButton_11_8_6_1_1.addActionListener(new ActionListener() {
+		JButton btnNewButton_m2 = new JButton("M+");
+		btnNewButton_m2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=Double.parseDouble(textField.getText());
 				memory+=firstNum;
 			}
 		});
-		btnNewButton_11_8_6_1_1.setFont(new Font("Cambria", Font.PLAIN, 18));
-		btnNewButton_11_8_6_1_1.setBounds(168, 86, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_6_1_1);
+		btnNewButton_m2.setFont(new Font("Cambria", Font.PLAIN, 18));
+		btnNewButton_m2.setBounds(168, 86, 63, 49);
+		frame.getContentPane().add(btnNewButton_m2);
 		
-		JButton btnNewButton_11_8_6_2 = new JButton("M-");
-		btnNewButton_11_8_6_2.addActionListener(new ActionListener() {
+		JButton btnNewButton_m1 = new JButton("M-");
+		btnNewButton_m1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				firstNum=Double.parseDouble(textField.getText());
 				memory-=firstNum;
 			}
 		});
-		btnNewButton_11_8_6_2.setFont(new Font("Cambria", Font.PLAIN, 18));
-		btnNewButton_11_8_6_2.setBounds(241, 86, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_6_2);
+		btnNewButton_m1.setFont(new Font("Cambria", Font.PLAIN, 18));
+		btnNewButton_m1.setBounds(241, 86, 63, 49);
+		frame.getContentPane().add(btnNewButton_m1);
 		
-		JButton btnNewButton_11_8_1_1_1_2_1 = new JButton("MC");
-		btnNewButton_11_8_1_1_1_2_1.addActionListener(new ActionListener() {
+		JButton btnNewButton_m4 = new JButton("MC");
+		btnNewButton_m4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				memory=0;
 				textField.setText(null);
 			}
 		});
-		btnNewButton_11_8_1_1_1_2_1.setFont(new Font("Cambria", Font.PLAIN, 18));
-		btnNewButton_11_8_1_1_1_2_1.setBounds(22, 86, 63, 49);
-		frame.getContentPane().add(btnNewButton_11_8_1_1_1_2_1);
+		btnNewButton_m4.setFont(new Font("Cambria", Font.PLAIN, 18));
+		btnNewButton_m4.setBounds(22, 86, 63, 49);
+		frame.getContentPane().add(btnNewButton_m4);
 	}
 }
