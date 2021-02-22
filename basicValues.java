@@ -7,9 +7,9 @@ abstract class basicValues {                                     //Super class
 	static double secondNum=0;
 	static double previousNum=0;
 	static double result=0;
-	static protected String operator;
-	static protected JButton op;
-	static protected JButton opNow;
+	static protected String operator=null;
+	static protected JButton op=null;
+	static protected JButton opNow=null;
 	static protected double memory=0;
 	static String angle="radian";
 	static String type="";

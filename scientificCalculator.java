@@ -40,7 +40,7 @@ public class scientificCalculator extends trigonometry{
 		frame = new JFrame();
 		frame.setTitle("Scientific Calculator");
 		frame.getContentPane().setFont(new Font("Arial", Font.PLAIN, 14));
-		frame.setBounds(100, 100, 560, 546);
+		frame.setBounds(100, 100, 560, 557);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -196,8 +196,13 @@ public class scientificCalculator extends trigonometry{
 		JButton btnNewButton_eq = new JButton("=");
 		btnNewButton_eq.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				secondNum=getNum();
-				doOperation(op);
+				if (op==null) {
+					textField.setText(String.valueOf(result));
+				}
+				else {
+					secondNum=getNum();
+				    doOperation(op);
+				}    
 			}
 		});
 		btnNewButton_eq.setFont(new Font("Cambria", Font.PLAIN, 20));

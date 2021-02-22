@@ -28,6 +28,7 @@ class Operation extends basicValues {                  //Sub class 1
 		}
 		
 		textField.setText(String.valueOf(result));
+		op=null;
 	}
 	
 	void doOperation(String operator) {                      //Method Overloading
