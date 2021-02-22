@@ -10,6 +10,7 @@ abstract class basicValues {                                     //Super class
 	static protected String operator;
 	static protected JButton op;
 	static protected JButton opNow;
+	static protected double memory=0;
 	static String angle="radian";
 	static String type="";
 	final double pi=Math.PI;                           //constants

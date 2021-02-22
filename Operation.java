@@ -25,8 +25,6 @@ class Operation extends basicValues {                  //Sub class 1
 		case "log\u2090x":                                         //for doing log a base b operation
 			result=Math.log10(firstNum)/Math.log10(secondNum);
 		    break;
-		case "\u02e3\u221Ay":
-			result=Math.pow(firstNum,1/secondNum);
 		}
 		
 		textField.setText(String.valueOf(result));
