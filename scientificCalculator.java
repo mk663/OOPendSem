@@ -242,6 +242,15 @@ public class scientificCalculator extends trigonometry{
 		btnNewButton_e2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textField.setText(null);
+				firstNum=0;
+				secondNum=0;
+				previousNum.clear();
+				result=0;
+				operator=null;
+				op=null;
+				opNow.clear();
+				angle="radian";
+				type="";
 			}
 		});
 		btnNewButton_e2.setFont(new Font("Cambria", Font.PLAIN, 20));
