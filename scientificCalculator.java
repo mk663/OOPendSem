@@ -1,5 +1,6 @@
 import java.awt.EventQueue;
 
+
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import java.awt.Font;
@@ -434,9 +435,19 @@ public class scientificCalculator extends trigonometry{
 		JButton btnNewButton_a8 = new JButton(")");
 		btnNewButton_a8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				firstNum=previousNum;
-				secondNum=getNum();
-				doOperation(opNow);
+				if(i>=0) {
+					if (i==previousNum.size()) {}
+					else {
+						firstNum=Double.parseDouble(previousNum.get(i));
+						secondNum=getNum();
+						doOperation(opNow.get(i));
+					}
+					i-=1;
+				}
+				else {
+					previousNum.clear();
+					opNow.clear();
+				}
 			}
 		});
 		btnNewButton_a8.setFont(new Font("Cambria", Font.PLAIN, 20));
@@ -446,8 +457,12 @@ public class scientificCalculator extends trigonometry{
 		JButton btnNewButton_a7 = new JButton("(");
 		btnNewButton_a7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				previousNum=firstNum;
-				opNow=op;
+				if(op==null) 
+					opNow.add(btnNewButton_a1);
+				else 
+					opNow.add(op);
+				previousNum.add(String.valueOf(firstNum));
+				i=previousNum.size();
 			}
 		});
 		btnNewButton_a7.setFont(new Font("Cambria", Font.PLAIN, 20));

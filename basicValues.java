@@ -1,18 +1,20 @@
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import java.util.ArrayList;
 
 abstract class basicValues {                                     //Super class
 	static protected JTextField textField;
 	static double firstNum=0;
 	static double secondNum=0;
-	static double previousNum=0;
+	static ArrayList<String> previousNum = new ArrayList<String>();
 	static double result=0;
 	static protected String operator=null;
 	static protected JButton op=null;
-	static protected JButton opNow=null;
+	static ArrayList<JButton> opNow = new ArrayList<JButton>(); 
 	static protected double memory=0;
 	static String angle="radian";
 	static String type="";
+	static int i=-1;
 	final double pi=Math.PI;                           //constants
 	final double exponent=Math.E;
 	
