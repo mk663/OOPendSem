@@ -1,6 +1,11 @@
 import javax.swing.JButton;
 
 class Operation extends basicValues {                  //Sub class 1
+	
+	Operation(){
+		super();
+	}
+	
 	final void doOperation(JButton operator) {
 		
 		switch(operator.getText()) {

@@ -1,33 +1,70 @@
-class trigonometry extends Operation {                     
+class trigonometry extends Operation {
+	
+	static String angle;
+	static String type;
+	static String invType;
+	
+	trigonometry() {
+		super();
+		angle="radian";
+		type="";
+		invType="";
+	}
+	
 	void doOperation(String operator) {                     //Method Overriding
+		
 		super.doOperation(operator);                        //Using super keyword to access overridden method "doOperation" 
+		
 		switch(operator) {
 		case "sin":
-			result=Math.sin(firstNum);
+			if (invType.equals("inv"))
+				result=Math.asin(firstNum);
+			else
+				result=Math.sin(firstNum);
 			break;
 		case "cos":
-			result=Math.cos(firstNum);
+			if (invType.equals("inv"))
+				result=Math.acos(firstNum);
+			else
+				result=Math.cos(firstNum);
 			break;
 		case "tan":
-			result=Math.tan(firstNum);
+			if (invType.equals("inv"))
+				result=Math.atan(firstNum);
+			else
+				result=Math.tan(firstNum);
 			break;
 		case "sind":
 			result=Math.sin(firstNum*pi/180);
 			break;
 		case "cosd":
-			result=Math.sin(firstNum*pi/180);
+			result=Math.cos(firstNum*pi/180);
+			if (firstNum==90)
+				result=Math.floor(result);
 			break;
 		case "tand":
-			result=Math.sin(firstNum*pi/180);
+			result=Math.tan(firstNum*pi/180);
+			double num=0;
+			if (firstNum==90)
+				result=1/num;
 			break;
 		case "sinh":
-			result=Math.sinh(firstNum);
+			if (invType.equals("inv"))
+				result=Math.log(firstNum + Math.sqrt(firstNum*firstNum + 1.0));
+			else
+				result=Math.sinh(firstNum);
 			break;
 		case "cosh":
-			result=Math.cosh(firstNum);
+			if (invType.equals("inv"))
+				 result=Math.log(firstNum + Math.sqrt(firstNum*firstNum - 1.0));
+			else
+				result=Math.cosh(firstNum);
 			break;
 		case "tanh":
-			result=Math.tanh(firstNum);
+			if (invType.equals("inv"))
+				result=0.5*Math.log((1.0+firstNum)/(1.0-firstNum));
+			else
+				result=Math.tan(firstNum);
 			break;
 		case "sindh":
 			result=Math.sinh(firstNum*pi/180);
