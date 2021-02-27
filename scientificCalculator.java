@@ -264,420 +264,423 @@ public class scientificCalculator extends trigonometry{
 		frame.getContentPane().add(btnNewButton_m1);
 		frame.getContentPane().add(btnNewButton_m4);
 		
-		
-		btnNewButton_9.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setNumber(btnNewButton_9);
-			}
-		});
-		
-		btnNewButton_8.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setNumber(btnNewButton_8);
-			}
-		});
-		
-		btnNewButton_7.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setNumber(btnNewButton_7);
-			}
-		});
-		
-		btnNewButton_6.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setNumber(btnNewButton_6);
-			}
-		});
-		
-		btnNewButton_5.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setNumber(btnNewButton_5);
-			}
-		});
-		
-		btnNewButton_4.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setNumber(btnNewButton_4);
-			}
-		});
-		
-		btnNewButton_3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setNumber(btnNewButton_3);
-			}
-		});
-		
-		btnNewButton_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setNumber(btnNewButton_2);
-			}
-		});
-		
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setNumber(btnNewButton_1);
-			}
-		});
-		
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setNumber(btnNewButton);
-			}
-		});
-		
-		btnNewButton_10.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setNumber(btnNewButton_10);
-			}
-		});
-		
-		btnNewButton_a3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				op=btnNewButton_a3;
-			}
-		});
-		
-		btnNewButton_a2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				op=btnNewButton_a2;
-			}
-		});
-		
-		btnNewButton_a1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				op=btnNewButton_a1;
-			}
-		});
-		
-		btnNewButton_eq.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if (op==null) {
-					textField.setText(String.valueOf(result));
-				}
-				else {
-					secondNum=getNum();
-				    doOperation(op);
-				}    
-			}
-		});
-		
-		btnNewButton_a4.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				op=btnNewButton_a4;
-			}
-		});
-		
-		btnNewButton_e1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String backSpace=null;
-				
-				if(textField.getText().length()>0) {
-					StringBuilder str=new StringBuilder(textField.getText());
-					str.deleteCharAt(textField.getText().length()-1);
-					backSpace=str.toString();
-					textField.setText(backSpace);
-				}
-			}
-		});
-		
-		btnNewButton_e2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				textField.setText(null);
-				firstNum=0;
-				secondNum=0;
-				previousNum.clear();
-				result=0;
-				operator=null;
-				op=null;
-				opNow.clear();
-				angle="radian";
-				btnNewButton_t7.setFont(new Font("Cambria", Font.BOLD, 18));
-				btnNewButton_t6.setFont(new Font("Cambria", Font.PLAIN, 19));
-				type="";
-				btnNewButton_t5.setFont(new Font("Cambria", Font.PLAIN, 18));
-				invType="";
-				btnNewButton_t8.setFont(new Font("Cambria", Font.PLAIN, 18));
-			}
-		});
-		
-		btnNewButton_a5.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				op=btnNewButton_a5;
-			}
-		});
-		
-		btnNewButton_l4.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				doOperation("ln");
-			}
-		});
-		
-		btnNewButton_p6.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				doOperation("sqrt");
-			}
-		});
-		
-		btnNewButton_l3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				doOperation("log");
-			}
-		});
-		
-		btnNewButton_p5.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				doOperation("x^2");
-			}
-		});
-		
-		btnNewButton_l2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				op=btnNewButton_l2;
-			}
-		});
-		
-		btnNewButton_p4.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				doOperation("x^3");
-			}
-		});
-		
-		btnNewButton_l1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				doOperation("exp");
-			}
-		});
-		
-		btnNewButton_p2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				op=btnNewButton_p2;
-			}
-		});
-		
-		btnNewButton_p9.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				doOperation("2^x");
-			}
-		});
-		
-		btnNewButton_p1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				doOperation("xfact");
-			}
-		});
-		
-		btnNewButton_c3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				doOperation("random");
-			}
-		});
-		
-		btnNewButton_c1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				textField.setText(String.valueOf(pi));
-			}
-		});
-		
-		btnNewButton_p8.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				doOperation("mod");
-			}
-		});
-		
-		btnNewButton_a6.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				doOperation("inverse");
-			}
-		});
-		
-		btnNewButton_c2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				textField.setText(String.valueOf(exponent));
-			}
-		});
-		
-		btnNewButton_p10.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				doOperation("10^x");
-			}
-		});
-		
-		btnNewButton_a8.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(i>=0) {
-					if (i==previousNum.size()) {}
-					else {
-						firstNum=Double.parseDouble(previousNum.get(i));
-						secondNum=getNum();
-						doOperation(opNow.get(i));
+		class actionListener {
+			actionListener() {
+				btnNewButton_9.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						setNumber(btnNewButton_9);
 					}
-					i-=1;
-				}
-				else {
-					previousNum.clear();
-					opNow.clear();
-				}
+				});
+				
+				btnNewButton_8.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						setNumber(btnNewButton_8);
+					}
+				});
+				
+				btnNewButton_7.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						setNumber(btnNewButton_7);
+					}
+				});
+				
+				btnNewButton_6.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						setNumber(btnNewButton_6);
+					}
+				});
+				
+				btnNewButton_5.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						setNumber(btnNewButton_5);
+					}
+				});
+				
+				btnNewButton_4.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						setNumber(btnNewButton_4);
+					}
+				});
+				
+				btnNewButton_3.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						setNumber(btnNewButton_3);
+					}
+				});
+				
+				btnNewButton_2.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						setNumber(btnNewButton_2);
+					}
+				});
+				
+				btnNewButton_1.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						setNumber(btnNewButton_1);
+					}
+				});
+				
+				btnNewButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						setNumber(btnNewButton);
+					}
+				});
+				
+				btnNewButton_10.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						setNumber(btnNewButton_10);
+					}
+				});
+				
+				btnNewButton_a3.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						op=btnNewButton_a3;
+					}
+				});
+				
+				btnNewButton_a2.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						op=btnNewButton_a2;
+					}
+				});
+				
+				btnNewButton_a1.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						op=btnNewButton_a1;
+					}
+				});
+				
+				btnNewButton_eq.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						if (op==null) {
+							textField.setText(String.valueOf(result));
+						}
+						else {
+							secondNum=getNum();
+						    doOperation(op);
+						}    
+					}
+				});
+				
+				btnNewButton_a4.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						op=btnNewButton_a4;
+					}
+				});
+				
+				btnNewButton_e1.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						String backSpace=null;
+						
+						if(textField.getText().length()>0) {
+							StringBuilder str=new StringBuilder(textField.getText());
+							str.deleteCharAt(textField.getText().length()-1);
+							backSpace=str.toString();
+							textField.setText(backSpace);
+						}
+					}
+				});
+				
+				btnNewButton_e2.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						textField.setText(null);
+						firstNum=0;
+						secondNum=0;
+						previousNum.clear();
+						result=0;
+						operator=null;
+						op=null;
+						opNow.clear();
+						angle="radian";
+						btnNewButton_t7.setFont(new Font("Cambria", Font.BOLD, 18));
+						btnNewButton_t6.setFont(new Font("Cambria", Font.PLAIN, 19));
+						type="";
+						btnNewButton_t5.setFont(new Font("Cambria", Font.PLAIN, 18));
+						invType="";
+						btnNewButton_t8.setFont(new Font("Cambria", Font.PLAIN, 18));
+					}
+				});
+				
+				btnNewButton_a5.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						op=btnNewButton_a5;
+					}
+				});
+				
+				btnNewButton_l4.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						doOperation("ln");
+					}
+				});
+				
+				btnNewButton_p6.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						doOperation("sqrt");
+					}
+				});
+				
+				btnNewButton_l3.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						doOperation("log");
+					}
+				});
+				
+				btnNewButton_p5.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						doOperation("x^2");
+					}
+				});
+				
+				btnNewButton_l2.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						op=btnNewButton_l2;
+					}
+				});
+				
+				btnNewButton_p4.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						doOperation("x^3");
+					}
+				});
+				
+				btnNewButton_l1.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						doOperation("exp");
+					}
+				});
+				
+				btnNewButton_p2.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						op=btnNewButton_p2;
+					}
+				});
+				
+				btnNewButton_p9.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						doOperation("2^x");
+					}
+				});
+				
+				btnNewButton_p1.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						doOperation("xfact");
+					}
+				});
+				
+				btnNewButton_c3.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						doOperation("random");
+					}
+				});
+				
+				btnNewButton_c1.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						textField.setText(String.valueOf(pi));
+					}
+				});
+				
+				btnNewButton_p8.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						doOperation("mod");
+					}
+				});
+				
+				btnNewButton_a6.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						doOperation("inverse");
+					}
+				});
+				
+				btnNewButton_c2.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						textField.setText(String.valueOf(exponent));
+					}
+				});
+				
+				btnNewButton_p10.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						doOperation("10^x");
+					}
+				});
+				
+				btnNewButton_a8.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						if(i>=0) {
+							if (i==previousNum.size()) {}
+							else {
+								firstNum=Double.parseDouble(previousNum.get(i));
+								secondNum=getNum();
+								doOperation(opNow.get(i));
+							}
+							i-=1;
+						}
+						else {
+							previousNum.clear();
+							opNow.clear();
+						}
+					}
+				});
+				
+				btnNewButton_a7.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						if(op==null) 
+							opNow.add(btnNewButton_a1);
+						else 
+							opNow.add(op);
+						previousNum.add(String.valueOf(firstNum));
+						i=previousNum.size();
+					}
+				});
+				
+				btnNewButton_t7.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						angle="radian";
+						btnNewButton_t7.setFont(new Font("Cambria", Font.BOLD, 18));
+						btnNewButton_t6.setFont(new Font("Cambria", Font.PLAIN, 19));
+					}
+				});
+				
+				btnNewButton_t6.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						angle="degree";
+						btnNewButton_t6.setFont(new Font("Cambria", Font.BOLD, 17));
+						btnNewButton_t7.setFont(new Font("Cambria", Font.PLAIN, 20));
+					}
+				});
+				
+				btnNewButton_t3.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						if (angle.equals("degree")) {
+							if (type.equals("hyperbole"))
+								doOperation("sindh");
+							else
+								doOperation("sind");
+						}
+						else {
+							if (type.equals("hyperbole")) 
+								doOperation("sinh");
+							else
+								doOperation("sin");
+						}
+					}
+				});
+				
+				btnNewButton_t2.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						if (angle.equals("degree")) {
+							if (type.equals("hyperbole")) 
+								doOperation("cosdh");
+							else
+								doOperation("cosd");
+						}
+						else {
+							if (type.equals("hyperbole"))
+								doOperation("cosh");
+							else
+								doOperation("cos");
+						}	
+					}
+				});
+				
+				btnNewButton_t1.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						if (angle.equals("degree")) {
+							if (type.equals("hyperbole"))
+								doOperation("tandh");
+							else
+								doOperation("tand");
+						}
+						else {
+							if (type.equals("hyperbole")) 
+								doOperation("tanh");
+							else
+								doOperation("tan");
+						}	
+					}
+				});
+				
+				btnNewButton_t5.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						if (type.equals("hyperbole")) {
+							type="";
+							btnNewButton_t5.setFont(new Font("Cambria", Font.PLAIN, 18));
+						}
+						else {
+							type="hyperbole";
+							btnNewButton_t5.setFont(new Font("Cambria", Font.BOLD, 17));
+						}
+					}
+				});
+				
+				btnNewButton_t8.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						if (invType.equals("inv")) {
+							invType="";
+							btnNewButton_t8.setFont(new Font("Cambria", Font.PLAIN, 18));
+						}
+						else {
+							invType="inv";
+							btnNewButton_t8.setFont(new Font("Cambria", Font.BOLD, 17));
+						}
+					}
+				});
+				
+				btnNewButton_p7.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=getNum();
+						doOperation("floor");
+					}
+				});
+				
+				btnNewButton_m3.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						textField.setText(String.valueOf(memory));
+					}
+				});
+				
+				btnNewButton_m2.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=Double.parseDouble(textField.getText());
+						memory+=firstNum;
+					}
+				});
+				
+				btnNewButton_m1.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						firstNum=Double.parseDouble(textField.getText());
+						memory-=firstNum;
+					}
+				});
+				
+				btnNewButton_m4.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						memory=0;
+						textField.setText(null);
+					}
+				});
 			}
-		});
-		
-		btnNewButton_a7.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(op==null) 
-					opNow.add(btnNewButton_a1);
-				else 
-					opNow.add(op);
-				previousNum.add(String.valueOf(firstNum));
-				i=previousNum.size();
-			}
-		});
-		
-		btnNewButton_t7.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				angle="radian";
-				btnNewButton_t7.setFont(new Font("Cambria", Font.BOLD, 18));
-				btnNewButton_t6.setFont(new Font("Cambria", Font.PLAIN, 19));
-			}
-		});
-		
-		btnNewButton_t6.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				angle="degree";
-				btnNewButton_t6.setFont(new Font("Cambria", Font.BOLD, 17));
-				btnNewButton_t7.setFont(new Font("Cambria", Font.PLAIN, 20));
-			}
-		});
-		
-		btnNewButton_t3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				if (angle.equals("degree")) {
-					if (type.equals("hyperbole"))
-						doOperation("sindh");
-					else
-						doOperation("sind");
-				}
-				else {
-					if (type.equals("hyperbole")) 
-						doOperation("sinh");
-					else
-						doOperation("sin");
-				}
-			}
-		});
-		
-		btnNewButton_t2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				if (angle.equals("degree")) {
-					if (type.equals("hyperbole")) 
-						doOperation("cosdh");
-					else
-						doOperation("cosd");
-				}
-				else {
-					if (type.equals("hyperbole"))
-						doOperation("cosh");
-					else
-						doOperation("cos");
-				}	
-			}
-		});
-		
-		btnNewButton_t1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				if (angle.equals("degree")) {
-					if (type.equals("hyperbole"))
-						doOperation("tandh");
-					else
-						doOperation("tand");
-				}
-				else {
-					if (type.equals("hyperbole")) 
-						doOperation("tanh");
-					else
-						doOperation("tan");
-				}	
-			}
-		});
-		
-		btnNewButton_t5.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if (type.equals("hyperbole")) {
-					type="";
-					btnNewButton_t5.setFont(new Font("Cambria", Font.PLAIN, 18));
-				}
-				else {
-					type="hyperbole";
-					btnNewButton_t5.setFont(new Font("Cambria", Font.BOLD, 17));
-				}
-			}
-		});
-		
-		btnNewButton_t8.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if (invType.equals("inv")) {
-					invType="";
-					btnNewButton_t8.setFont(new Font("Cambria", Font.PLAIN, 18));
-				}
-				else {
-					invType="inv";
-					btnNewButton_t8.setFont(new Font("Cambria", Font.BOLD, 17));
-				}
-			}
-		});
-		
-		btnNewButton_p7.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=getNum();
-				doOperation("floor");
-			}
-		});
-		
-		btnNewButton_m3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				textField.setText(String.valueOf(memory));
-			}
-		});
-		
-		btnNewButton_m2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=Double.parseDouble(textField.getText());
-				memory+=firstNum;
-			}
-		});
-		
-		btnNewButton_m1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstNum=Double.parseDouble(textField.getText());
-				memory-=firstNum;
-			}
-		});
-		
-		btnNewButton_m4.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				memory=0;
-				textField.setText(null);
-			}
-		});
-		
+			actionListener obj = new actionListener();
+		}
 	}
 }
