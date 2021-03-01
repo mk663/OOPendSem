@@ -264,6 +264,8 @@ public class scientificCalculator extends trigonometry{
 		frame.getContentPane().add(btnNewButton_m1);
 		frame.getContentPane().add(btnNewButton_m4);
 		
+		class actionListener {
+			void action() {
 				btnNewButton_9.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						setNumber(btnNewButton_9);
@@ -544,7 +546,7 @@ public class scientificCalculator extends trigonometry{
 						else 
 							opNow.add(op);
 						previousNum.add(String.valueOf(firstNum));
-						i=previousNum.size();
+						i=previousNum.size()-1;
 					}
 				});
 				
@@ -677,5 +679,9 @@ public class scientificCalculator extends trigonometry{
 						textField.setText(null);
 					}
 				});
+			}
+		}
+		actionListener obj = new actionListener();
+		obj.action();
 	}
 }
