@@ -1,6 +1,5 @@
 import java.awt.EventQueue;
 
-
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import java.awt.Font;
@@ -9,6 +8,12 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
+import javax.swing.JRadioButton;
+import java.awt.SystemColor;
+import javax.swing.ButtonGroup;
+import javax.swing.UIManager;
+import java.awt.Color;
+
 
 public class scientificCalculator extends trigonometry{
 	
@@ -51,6 +56,7 @@ public class scientificCalculator extends trigonometry{
 	void initialize() {
 		
 		frame = new JFrame();
+		frame.getContentPane().setBackground(UIManager.getColor("Button.foreground"));
 		frame.setTitle("Scientific Calculator");
 		frame.getContentPane().setFont(new Font("Arial", Font.PLAIN, 14));
 		frame.setBounds(100, 100, 560, 557);
@@ -65,15 +71,25 @@ public class scientificCalculator extends trigonometry{
 		textField.setColumns(10);
 		
 		JButton btnNewButton_9 = new JButton("9");
+		btnNewButton_9.setBackground(SystemColor.textHighlight);
 		JButton btnNewButton_8 = new JButton("8");
+		btnNewButton_8.setBackground(SystemColor.textHighlight);
 		JButton btnNewButton_7 = new JButton("7");
+		btnNewButton_7.setBackground(SystemColor.textHighlight);
 		JButton btnNewButton_6 = new JButton("6");
+		btnNewButton_6.setBackground(SystemColor.textHighlight);
 		JButton btnNewButton_5 = new JButton("5");
+		btnNewButton_5.setBackground(SystemColor.textHighlight);
 		JButton btnNewButton_4 = new JButton("4");
+		btnNewButton_4.setBackground(SystemColor.textHighlight);
 		JButton btnNewButton_3 = new JButton("3");
+		btnNewButton_3.setBackground(SystemColor.textHighlight);
 		JButton btnNewButton_2 = new JButton("2");
+		btnNewButton_2.setBackground(SystemColor.textHighlight);
 		JButton btnNewButton_1 = new JButton("1");
+		btnNewButton_1.setBackground(SystemColor.textHighlight);
 		JButton btnNewButton = new JButton("0");
+		btnNewButton.setBackground(SystemColor.textHighlight);
 		JButton btnNewButton_10 = new JButton(".");
 		JButton btnNewButton_a5 = new JButton("%");
 		JButton btnNewButton_a4 = new JButton("/");
@@ -81,8 +97,10 @@ public class scientificCalculator extends trigonometry{
 		JButton btnNewButton_a2 = new JButton("-");
 		JButton btnNewButton_a1 = new JButton("+");
 		JButton btnNewButton_eq = new JButton("=");
+		btnNewButton_eq.setBackground(Color.ORANGE);
 		JButton btnNewButton_e1 = new JButton("\uF0E7");  //backspace
 		JButton btnNewButton_e2 = new JButton("C");
+		btnNewButton_e2.setBackground(UIManager.getColor("Button.background"));
 		JButton btnNewButton_l4 = new JButton("ln");
 		JButton btnNewButton_p6 = new JButton("\u221A");       //square root
 		JButton btnNewButton_l3 = new JButton("log");
@@ -101,8 +119,6 @@ public class scientificCalculator extends trigonometry{
 		JButton btnNewButton_p10 = new JButton("10\u02E3");    //10^x
 		JButton btnNewButton_a8 = new JButton(")");
 		JButton btnNewButton_a7 = new JButton("(");
-		JButton btnNewButton_t7 = new JButton("rad");
-		JButton btnNewButton_t6 = new JButton("deg");
 		JButton btnNewButton_t3 = new JButton("sin");
 		JButton btnNewButton_t2 = new JButton("cos");
 		JButton btnNewButton_t1 = new JButton("tan");
@@ -113,6 +129,12 @@ public class scientificCalculator extends trigonometry{
 		JButton btnNewButton_m2 = new JButton("M+");
 		JButton btnNewButton_m1 = new JButton("M-");
 		JButton btnNewButton_m4 = new JButton("MC");
+		JRadioButton rdbtnNewButton_r = new JRadioButton("rad");
+		rdbtnNewButton_r.setSelected(true);
+		JRadioButton rdbtnNewButton_d = new JRadioButton("deg");
+		ButtonGroup bg=new ButtonGroup();  
+		bg.add(rdbtnNewButton_r);
+		bg.add(rdbtnNewButton_d);
 		
 		btnNewButton_9.setFont(new Font("Cambria", Font.BOLD, 20));
 		btnNewButton_8.setFont(new Font("Cambria", Font.BOLD, 20));
@@ -151,8 +173,6 @@ public class scientificCalculator extends trigonometry{
 		btnNewButton_p10.setFont(new Font("Cambria", Font.PLAIN, 20));
 		btnNewButton_a8.setFont(new Font("Cambria", Font.PLAIN, 20));
 		btnNewButton_a7.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_t7.setFont(new Font("Cambria", Font.BOLD, 18));
-		btnNewButton_t6.setFont(new Font("Cambria", Font.PLAIN, 19));
 		btnNewButton_t3.setFont(new Font("Cambria", Font.PLAIN, 20));
 		btnNewButton_t2.setFont(new Font("Cambria", Font.PLAIN, 20));
 		btnNewButton_t1.setFont(new Font("Cambria", Font.PLAIN, 20));
@@ -163,6 +183,10 @@ public class scientificCalculator extends trigonometry{
 		btnNewButton_m2.setFont(new Font("Cambria", Font.PLAIN, 18));
 		btnNewButton_m1.setFont(new Font("Cambria", Font.PLAIN, 18));
 		btnNewButton_m4.setFont(new Font("Cambria", Font.PLAIN, 18));
+		rdbtnNewButton_r.setFont(new Font("Cambria", Font.PLAIN, 18));
+		rdbtnNewButton_r.setBackground(UIManager.getColor("Button.background"));
+		rdbtnNewButton_d.setFont(new Font("Cambria", Font.PLAIN, 18));
+		rdbtnNewButton_d.setBackground(UIManager.getColor("Button.background"));
 		
 		btnNewButton_9.setBounds(241, 267, 63, 49);
 		btnNewButton_8.setBounds(314, 267, 63, 49);
@@ -201,8 +225,6 @@ public class scientificCalculator extends trigonometry{
 		btnNewButton_p10.setBounds(95, 387, 63, 49);
 		btnNewButton_a8.setBounds(314, 146, 63, 49);
 		btnNewButton_a7.setBounds(241, 146, 63, 49);
-		btnNewButton_t7.setBounds(22, 86, 63, 49);
-		btnNewButton_t6.setBounds(22, 146, 63, 49);
 		btnNewButton_t3.setBounds(22, 327, 63, 49);
 		btnNewButton_t2.setBounds(22, 387, 63, 49);
 		btnNewButton_t1.setBounds(22, 447, 63, 49);
@@ -213,6 +235,8 @@ public class scientificCalculator extends trigonometry{
 		btnNewButton_m2.setBounds(241, 86, 63, 49);
 		btnNewButton_m1.setBounds(314, 86, 63, 49);
 		btnNewButton_m4.setBounds(95, 86, 63, 49);
+		rdbtnNewButton_r.setBounds(22, 86, 63, 49);
+		rdbtnNewButton_d.setBounds(22, 146, 63, 49);
 		
 		frame.getContentPane().add(btnNewButton_9);
 		frame.getContentPane().add(btnNewButton_8);
@@ -251,8 +275,6 @@ public class scientificCalculator extends trigonometry{
 		frame.getContentPane().add(btnNewButton_p10);
 		frame.getContentPane().add(btnNewButton_a8);
 		frame.getContentPane().add(btnNewButton_a7);
-		frame.getContentPane().add(btnNewButton_t7);
-		frame.getContentPane().add(btnNewButton_t6);
 		frame.getContentPane().add(btnNewButton_t3);
 		frame.getContentPane().add(btnNewButton_t2);
 		frame.getContentPane().add(btnNewButton_t1);		
@@ -263,6 +285,8 @@ public class scientificCalculator extends trigonometry{
 		frame.getContentPane().add(btnNewButton_m2);
 		frame.getContentPane().add(btnNewButton_m1);
 		frame.getContentPane().add(btnNewButton_m4);
+		frame.getContentPane().add(rdbtnNewButton_r);
+		frame.getContentPane().add(rdbtnNewButton_d);
 		
 		class actionListener {
 			void action() {
@@ -395,13 +419,6 @@ public class scientificCalculator extends trigonometry{
 						operator=null;
 						op=null;
 						opNow.clear();
-						angle="radian";
-						btnNewButton_t7.setFont(new Font("Cambria", Font.BOLD, 18));
-						btnNewButton_t6.setFont(new Font("Cambria", Font.PLAIN, 19));
-						type="";
-						btnNewButton_t5.setFont(new Font("Cambria", Font.PLAIN, 18));
-						invType="";
-						btnNewButton_t8.setFont(new Font("Cambria", Font.PLAIN, 18));
 					}
 				});
 				
@@ -550,22 +567,6 @@ public class scientificCalculator extends trigonometry{
 					}
 				});
 				
-				btnNewButton_t7.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						angle="radian";
-						btnNewButton_t7.setFont(new Font("Cambria", Font.BOLD, 18));
-						btnNewButton_t6.setFont(new Font("Cambria", Font.PLAIN, 19));
-					}
-				});
-				
-				btnNewButton_t6.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						angle="degree";
-						btnNewButton_t6.setFont(new Font("Cambria", Font.BOLD, 17));
-						btnNewButton_t7.setFont(new Font("Cambria", Font.PLAIN, 20));
-					}
-				});
-				
 				btnNewButton_t3.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
@@ -677,6 +678,18 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						memory=0;
 						textField.setText(null);
+					}
+				});
+				
+				rdbtnNewButton_r.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						angle="radian";
+					}
+				});
+				
+				rdbtnNewButton_d.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						angle="degree";
 					}
 				});
 			}
