@@ -13,10 +13,11 @@ import java.awt.SystemColor;
 import javax.swing.ButtonGroup;
 import javax.swing.UIManager;
 import java.awt.Color;
+import javax.swing.JLabel;
 
 
 public class scientificCalculator extends trigonometry{
-	
+	//static protected JTextField textField;
 	private JFrame frame;
 	ArrayList<String> previousNum = new ArrayList<String>();
 	ArrayList<JButton> opNow = new ArrayList<JButton>(); 
@@ -59,14 +60,14 @@ public class scientificCalculator extends trigonometry{
 		frame.getContentPane().setBackground(UIManager.getColor("Button.foreground"));
 		frame.setTitle("Scientific Calculator");
 		frame.getContentPane().setFont(new Font("Arial", Font.PLAIN, 14));
-		frame.setBounds(100, 100, 560, 557);
+		frame.setBounds(100, 100, 560, 617);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		textField = new JTextField();
 		textField.setHorizontalAlignment(SwingConstants.RIGHT);
-		textField.setFont(new Font("Cambria Math", Font.PLAIN, 20));
-		textField.setBounds(22, 25, 501, 43);
+		textField.setFont(new Font("Cambria Math", Font.PLAIN, 22));
+		textField.setBounds(22, 77, 501, 49);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
@@ -98,25 +99,25 @@ public class scientificCalculator extends trigonometry{
 		JButton btnNewButton_a1 = new JButton("+");
 		JButton btnNewButton_eq = new JButton("=");
 		btnNewButton_eq.setBackground(Color.ORANGE);
-		JButton btnNewButton_e1 = new JButton("\uF0E7");  //backspace
+		JButton btnNewButton_e1 = new JButton("\uF0E7");                           //backspace
 		JButton btnNewButton_e2 = new JButton("C");
 		btnNewButton_e2.setBackground(UIManager.getColor("Button.background"));
 		JButton btnNewButton_l4 = new JButton("ln");
-		JButton btnNewButton_p6 = new JButton("\u221A");       //square root
+		JButton btnNewButton_p6 = new JButton("\u221A");                            //square root
 		JButton btnNewButton_l3 = new JButton("log");
-		JButton btnNewButton_p5 = new JButton("x\u00B2");      //x square
-		JButton btnNewButton_p4 = new JButton("x\u00B3");      //x cube
-		JButton btnNewButton_p2 = new JButton("x\u02B8");      //x^y
-		JButton btnNewButton_p9 = new JButton("2\u02E3");      //2^x
+		JButton btnNewButton_p5 = new JButton("x\u00B2");                           //x square
+		JButton btnNewButton_p4 = new JButton("x\u00B3");                           //x cube
+		JButton btnNewButton_p2 = new JButton("x\u02B8");                           //x^y
+		JButton btnNewButton_p9 = new JButton("2\u02E3");                           //2^x
 		JButton btnNewButton_p1 = new JButton("x!");
-		JButton btnNewButton_l2 = new JButton("log\u2090x");   //log x base y
-		JButton btnNewButton_l1 = new JButton("e\u02E3");      // e^x
+		JButton btnNewButton_l2 = new JButton("log\u2090x");                        //log x base y
+		JButton btnNewButton_l1 = new JButton("e\u02E3");                           // e^x
 		JButton btnNewButton_c3 = new JButton("rand");
-		JButton btnNewButton_c1 = new JButton("\u03C0");       //pi
+		JButton btnNewButton_c1 = new JButton("\u03C0");                            //pi
 		JButton btnNewButton_p8 = new JButton("|x|");
-		JButton btnNewButton_a6 = new JButton("x\u207B\u00B9");     //x^-1
+		JButton btnNewButton_a6 = new JButton("x\u207B\u00B9");                     //x^-1
 		JButton btnNewButton_c2 = new JButton("e");
-		JButton btnNewButton_p10 = new JButton("10\u02E3");    //10^x
+		JButton btnNewButton_p10 = new JButton("10\u02E3");                         //10^x
 		JButton btnNewButton_a8 = new JButton(")");
 		JButton btnNewButton_a7 = new JButton("(");
 		JButton btnNewButton_t3 = new JButton("sin");
@@ -188,55 +189,55 @@ public class scientificCalculator extends trigonometry{
 		rdbtnNewButton_d.setFont(new Font("Cambria", Font.PLAIN, 18));
 		rdbtnNewButton_d.setBackground(UIManager.getColor("Button.background"));
 		
-		btnNewButton_9.setBounds(241, 267, 63, 49);
-		btnNewButton_8.setBounds(314, 267, 63, 49);
-		btnNewButton_7.setBounds(387, 267, 63, 49);
-		btnNewButton_6.setBounds(241, 327, 63, 49);
-		btnNewButton_5.setBounds(314, 327, 63, 49);
-		btnNewButton_4.setBounds(387, 327, 63, 49);
-		btnNewButton_3.setBounds(241, 387, 63, 49);
-		btnNewButton_2.setBounds(314, 387, 63, 49);
-		btnNewButton_10.setBounds(387, 447, 63, 49);
-		btnNewButton_1.setBounds(387, 387, 63, 49);
-		btnNewButton.setBounds(314, 447, 63, 49);
-		btnNewButton_a3.setBounds(460, 267, 63, 49);
-		btnNewButton_a2.setBounds(460, 327, 63, 49);
-		btnNewButton_a1.setBounds(460, 387, 63, 49);
-		btnNewButton_eq.setBounds(460, 447, 63, 49); 
-		btnNewButton_a4.setBounds(460, 207, 63, 49);
-		btnNewButton_e1.setBounds(387, 207, 63, 49);
-		btnNewButton_e2.setBounds(314, 207, 63, 49);
-		btnNewButton_a5.setBounds(241, 207, 63, 49);
-		btnNewButton_l4.setBounds(95, 146, 63, 49);
-		btnNewButton_p6.setBounds(168, 207, 63, 49);
-		btnNewButton_l3.setBounds(95, 207, 63, 49);
-		btnNewButton_p5.setBounds(168, 267, 63, 49);
-		btnNewButton_l2.setBounds(95, 267, 63, 49);
-		btnNewButton_p4.setBounds(168, 327, 63, 49);
-		btnNewButton_l1.setBounds(95, 327, 63, 49);
-		btnNewButton_p1.setBounds(168, 447, 63, 49);
-		btnNewButton_p2.setBounds(168, 387, 63, 49);
-		btnNewButton_p9.setBounds(95, 447, 63, 49);
-		btnNewButton_c3.setBounds(387, 147, 63, 49);
-		btnNewButton_c1.setBounds(460, 86, 63, 49);
-		btnNewButton_p8.setBounds(241, 447, 63, 49);
-		btnNewButton_a6.setBounds(460, 146, 63, 49);
-		btnNewButton_c2.setBounds(387, 86, 63, 49);
-		btnNewButton_p10.setBounds(95, 387, 63, 49);
-		btnNewButton_a8.setBounds(314, 146, 63, 49);
-		btnNewButton_a7.setBounds(241, 146, 63, 49);
-		btnNewButton_t3.setBounds(22, 327, 63, 49);
-		btnNewButton_t2.setBounds(22, 387, 63, 49);
-		btnNewButton_t1.setBounds(22, 447, 63, 49);
-		btnNewButton_t5.setBounds(22, 207, 63, 49);
-		btnNewButton_t8.setBounds(22, 267, 63, 49);
-		btnNewButton_p7.setBounds(168, 146, 63, 49);
-		btnNewButton_m3.setBounds(168, 87, 63, 49);
-		btnNewButton_m2.setBounds(241, 86, 63, 49);
-		btnNewButton_m1.setBounds(314, 86, 63, 49);
-		btnNewButton_m4.setBounds(95, 86, 63, 49);
-		rdbtnNewButton_r.setBounds(22, 86, 63, 49);
-		rdbtnNewButton_d.setBounds(22, 146, 63, 49);
+		btnNewButton_9.setBounds(241, 325, 63, 49);
+		btnNewButton_8.setBounds(314, 325, 63, 49);
+		btnNewButton_7.setBounds(387, 325, 63, 49);
+		btnNewButton_6.setBounds(241, 385, 63, 49);
+		btnNewButton_5.setBounds(314, 385, 63, 49);
+		btnNewButton_4.setBounds(387, 385, 63, 49);
+		btnNewButton_3.setBounds(241, 445, 63, 49);
+		btnNewButton_2.setBounds(314, 445, 63, 49);
+		btnNewButton_10.setBounds(387, 505, 63, 49);
+		btnNewButton_1.setBounds(387, 445, 63, 49);
+		btnNewButton.setBounds(314, 505, 63, 49);
+		btnNewButton_a3.setBounds(460, 325, 63, 49);
+		btnNewButton_a2.setBounds(460, 385, 63, 49);
+		btnNewButton_a1.setBounds(460, 445, 63, 49);
+		btnNewButton_eq.setBounds(460, 505, 63, 49); 
+		btnNewButton_a4.setBounds(460, 265, 63, 49);
+		btnNewButton_e1.setBounds(387, 265, 63, 49);
+		btnNewButton_e2.setBounds(314, 265, 63, 49);
+		btnNewButton_a5.setBounds(241, 265, 63, 49);
+		btnNewButton_l4.setBounds(95, 204, 63, 49);
+		btnNewButton_p6.setBounds(168, 265, 63, 49);
+		btnNewButton_l3.setBounds(95, 265, 63, 49);
+		btnNewButton_p5.setBounds(168, 325, 63, 49);
+		btnNewButton_l2.setBounds(95, 325, 63, 49);
+		btnNewButton_p4.setBounds(168, 385, 63, 49);
+		btnNewButton_l1.setBounds(95, 385, 63, 49);
+		btnNewButton_p1.setBounds(168, 505, 63, 49);
+		btnNewButton_p2.setBounds(168, 445, 63, 49);
+		btnNewButton_p9.setBounds(95, 505, 63, 49);
+		btnNewButton_c3.setBounds(387, 205, 63, 49);
+		btnNewButton_c1.setBounds(460, 144, 63, 49);
+		btnNewButton_p8.setBounds(241, 505, 63, 49);
+		btnNewButton_a6.setBounds(460, 204, 63, 49);
+		btnNewButton_c2.setBounds(387, 144, 63, 49);
+		btnNewButton_p10.setBounds(95, 445, 63, 49);
+		btnNewButton_a8.setBounds(314, 204, 63, 49);
+		btnNewButton_a7.setBounds(241, 204, 63, 49);
+		btnNewButton_t3.setBounds(22, 385, 63, 49);
+		btnNewButton_t2.setBounds(22, 445, 63, 49);
+		btnNewButton_t1.setBounds(22, 505, 63, 49);
+		btnNewButton_t5.setBounds(22, 265, 63, 49);
+		btnNewButton_t8.setBounds(22, 325, 63, 49);
+		btnNewButton_p7.setBounds(168, 204, 63, 49);
+		btnNewButton_m3.setBounds(168, 145, 63, 49);
+		btnNewButton_m2.setBounds(241, 144, 63, 49);
+		btnNewButton_m1.setBounds(314, 144, 63, 49);
+		btnNewButton_m4.setBounds(95, 144, 63, 49);
+		rdbtnNewButton_r.setBounds(22, 144, 63, 49);
+		rdbtnNewButton_d.setBounds(22, 204, 63, 49);
 		
 		frame.getContentPane().add(btnNewButton_9);
 		frame.getContentPane().add(btnNewButton_8);
@@ -288,8 +289,18 @@ public class scientificCalculator extends trigonometry{
 		frame.getContentPane().add(rdbtnNewButton_r);
 		frame.getContentPane().add(rdbtnNewButton_d);
 		
+		JLabel label = new JLabel("");
+		label.setHorizontalAlignment(SwingConstants.TRAILING);
+		label.setForeground(Color.WHITE);
+		label.setFont(new Font("Cambria Math", Font.PLAIN, 20));
+		label.setBounds(22, 22, 501, 37);
+		frame.getContentPane().add(label);
+		
+		
 		class actionListener {
+			
 			void action() {
+				
 				btnNewButton_9.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						setNumber(btnNewButton_9);
@@ -360,6 +371,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						op=btnNewButton_a3;
+						label.setText(String.valueOf(firstNum)+"*");
 					}
 				});
 				
@@ -367,6 +379,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						op=btnNewButton_a2;
+						label.setText(String.valueOf(firstNum)+String.valueOf(op.getText()));
 					}
 				});
 				
@@ -374,6 +387,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						op=btnNewButton_a1;
+						label.setText(String.valueOf(firstNum)+String.valueOf(op.getText()));
 					}
 				});
 				
@@ -385,6 +399,7 @@ public class scientificCalculator extends trigonometry{
 						else {
 							secondNum=getNum();
 						    doOperation(op);
+						    label.setText(label.getText()+String.valueOf(secondNum));
 						}    
 					}
 				});
@@ -393,6 +408,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						op=btnNewButton_a4;
+						label.setText(String.valueOf(firstNum)+String.valueOf(op.getText()));
 					}
 				});
 				
@@ -411,14 +427,15 @@ public class scientificCalculator extends trigonometry{
 				
 				btnNewButton_e2.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						textField.setText(null);
+						textField.setText("");
+						label.setText("");
 						firstNum=0;
 						secondNum=0;
 						previousNum.clear();
 						result=0;
 						operator=null;
 						op=null;
-						opNow.clear();
+						opNow.clear();				
 					}
 				});
 				
@@ -426,6 +443,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						op=btnNewButton_a5;
+						label.setText(String.valueOf(firstNum)+String.valueOf(op.getText()));
 					}
 				});
 				
@@ -433,6 +451,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("ln");
+						label.setText("ln("+String.valueOf(firstNum)+")");
 					}
 				});
 				
@@ -440,6 +459,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("sqrt");
+						label.setText("\u221A"+String.valueOf(firstNum));
 					}
 				});
 				
@@ -447,6 +467,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("log");
+						label.setText("log("+String.valueOf(firstNum)+")");
 					}
 				});
 				
@@ -454,6 +475,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("x^2");
+						label.setText(String.valueOf(firstNum)+"\u00B2");
 					}
 				});
 				
@@ -461,6 +483,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						op=btnNewButton_l2;
+						label.setText("log("+String.valueOf(firstNum)+") base");
 					}
 				});
 				
@@ -468,6 +491,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("x^3");
+						label.setText(String.valueOf(firstNum)+"\u00B3");
 					}
 				});
 				
@@ -475,6 +499,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("exp");
+						label.setText("e^"+String.valueOf(firstNum));
 					}
 				});
 				
@@ -482,6 +507,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						op=btnNewButton_p2;
+						label.setText(String.valueOf(firstNum)+"^");
 					}
 				});
 				
@@ -489,6 +515,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("2^x");
+						label.setText("2^"+String.valueOf(firstNum));
 					}
 				});
 				
@@ -496,18 +523,21 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("xfact");
+						label.setText(String.valueOf(firstNum)+"!");
 					}
 				});
 				
 				btnNewButton_c3.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						doOperation("random");
+						label.setText("random");
 					}
 				});
 				
 				btnNewButton_c1.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						textField.setText(String.valueOf(pi));
+						label.setText("\u03C0");
 					}
 				});
 				
@@ -515,6 +545,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("mod");
+						label.setText("|"+String.valueOf(firstNum)+"|");
 					}
 				});
 				
@@ -522,12 +553,14 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("inverse");
+						label.setText(String.valueOf(firstNum)+"\u207B\u00B9");
 					}
 				});
 				
 				btnNewButton_c2.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						textField.setText(String.valueOf(exponent));
+						label.setText("e");
 					}
 				});
 				
@@ -535,6 +568,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("10^x");
+						label.setText("10^"+String.valueOf(firstNum));
 					}
 				});
 				
@@ -548,22 +582,34 @@ public class scientificCalculator extends trigonometry{
 								doOperation(opNow.get(i));
 							}
 							i-=1;
+							label.setText(")");
 						}
 						else {
 							previousNum.clear();
 							opNow.clear();
+							firstNum=0;
+							secondNum=0;
+							op=btnNewButton_a1;
 						}
 					}
 				});
 				
 				btnNewButton_a7.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						if(op==null) 
-							opNow.add(btnNewButton_a1);
+						if(textField.getText().equals("")) {
+							if(op==null || label.getText().equals("(")) {
+						    	opNow.add(btnNewButton_a1);
+							    previousNum.add(String.valueOf(0));
+						    }
+						    else {
+							    opNow.add(op);
+						        previousNum.add(String.valueOf(firstNum));
+						    }
+						    i=previousNum.size()-1;
+						    label.setText("(");
+						}
 						else 
-							opNow.add(op);
-						previousNum.add(String.valueOf(firstNum));
-						i=previousNum.size()-1;
+							textField.setText("Select operator");
 					}
 				});
 				
@@ -582,6 +628,7 @@ public class scientificCalculator extends trigonometry{
 							else
 								doOperation("sin");
 						}
+						label.setText("sin("+String.valueOf(firstNum)+")");
 					}
 				});
 				
@@ -599,7 +646,8 @@ public class scientificCalculator extends trigonometry{
 								doOperation("cosh");
 							else
 								doOperation("cos");
-						}	
+						}
+						label.setText("cos("+String.valueOf(firstNum)+")");
 					}
 				});
 				
@@ -617,7 +665,8 @@ public class scientificCalculator extends trigonometry{
 								doOperation("tanh");
 							else
 								doOperation("tan");
-						}	
+						}
+						label.setText("tan("+String.valueOf(firstNum)+")");
 					}
 				});
 				
@@ -664,6 +713,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=Double.parseDouble(textField.getText());
 						memory+=firstNum;
+						label.setText(String.valueOf(memory));
 					}
 				});
 				
@@ -671,6 +721,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=Double.parseDouble(textField.getText());
 						memory-=firstNum;
+						label.setText(String.valueOf(memory));
 					}
 				});
 				

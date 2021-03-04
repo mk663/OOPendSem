@@ -35,18 +35,22 @@ class trigonometry extends Operation {
 				result=Math.tan(firstNum);
 			break;
 		case "sind":
-			result=Math.sin(firstNum*pi/180);
+			if (invType.equals("inv"))
+				result=Math.toDegrees(Math.asin(firstNum));
+			else
+				result=Math.toDegrees(Math.sin(firstNum));
 			break;
 		case "cosd":
-			result=Math.cos(firstNum*pi/180);
-			if (firstNum==90)
-				result=Math.floor(result);
+			if (invType.equals("inv"))
+				result=Math.toDegrees(Math.acos(firstNum));
+			else
+				result=Math.toDegrees(Math.cos(firstNum));
 			break;
 		case "tand":
-			result=Math.tan(firstNum*pi/180);
-			double num=0;
-			if (firstNum==90)
-				result=1/num;
+			if (invType.equals("inv"))
+				result=Math.toDegrees(Math.atan(firstNum));
+			else
+				result=Math.toDegrees(Math.tan(firstNum));
 			break;
 		case "sinh":
 			if (invType.equals("inv"))
@@ -64,16 +68,25 @@ class trigonometry extends Operation {
 			if (invType.equals("inv"))
 				result=0.5*Math.log((1.0+firstNum)/(1.0-firstNum));
 			else
-				result=Math.tan(firstNum);
+				result=Math.tanh(firstNum);
 			break;
 		case "sindh":
-			result=Math.sinh(firstNum*pi/180);
+			if (invType.equals("inv"))
+				result=Math.log(firstNum + Math.sqrt(firstNum*firstNum + 1.0));
+			else
+				result=Math.toDegrees(Math.sinh(firstNum));
 			break;
 		case "cosdh":
-			result=Math.cosh(firstNum*pi/180);
+			if (invType.equals("inv"))
+				 result=Math.log(firstNum + Math.sqrt(firstNum*firstNum - 1.0));
+			else
+				result=Math.toDegrees(Math.cosh(firstNum));
 			break;
 		case "tandh":
-			result=Math.tanh(firstNum*pi/180);
+			if (invType.equals("inv"))
+				result=0.5*Math.log((1.0+firstNum)/(1.0-firstNum));
+			else
+				result=Math.toDegrees(Math.tanh(firstNum));
 			break;
 		}	
 		textField.setText(String.valueOf(result));
