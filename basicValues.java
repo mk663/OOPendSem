@@ -2,28 +2,32 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 
 
-abstract class basicValues {                                     //Super class
+abstract class basicValues {                            //Super class
 	
 	static protected JTextField textField;
 	static double firstNum;
 	static double secondNum;
 	static double result;
-	static protected String operator;
-	static protected JButton op;
-	final double pi;                           //constants
+	static String operator;
+	static JButton op;
+	
+	//constants
+	final double pi;                                    
 	final double exponent;
 	
 	basicValues() {
+		
 		firstNum=0;
 		secondNum=0;
 		result=0;
 		operator=null;
 		op=null;
-		pi=Math.PI; 
-		exponent=Math.E;
+		
+		this.pi=Math.PI; 
+		this.exponent=Math.E;
 	}
 	
-	static public double getNum() {
+	static double getNum() {
 		double num=0;
 		String text="";
 		if (textField.getText().equals(""))

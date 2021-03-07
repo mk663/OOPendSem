@@ -17,16 +17,20 @@ import javax.swing.JLabel;
 
 
 public class scientificCalculator extends trigonometry{
-	//static protected JTextField textField;
+	
+	//instance variables
 	private JFrame frame;
+	protected double memory;
+	static int inc;
+	
+	//ArrayLists
 	ArrayList<String> previousNum = new ArrayList<String>();
 	ArrayList<JButton> opNow = new ArrayList<JButton>(); 
-	protected double memory;
-	static int i;
 	
 	/**
 	 * Launch the application.
 	 */
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -43,18 +47,17 @@ public class scientificCalculator extends trigonometry{
 	/**
 	 * Create the application.
 	 */
+	
+	//constructor
 	public scientificCalculator() {
-		super();
+		super("radian");
 		memory=0;
-		i=-1;
-		initialize();
+		inc=-1;
+		calculator();
 	}
     
 	
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	void initialize() {
+	void calculator() {
 		
 		frame = new JFrame();
 		frame.getContentPane().setBackground(UIManager.getColor("Button.foreground"));
@@ -71,224 +74,6 @@ public class scientificCalculator extends trigonometry{
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		JButton btnNewButton_9 = new JButton("9");
-		btnNewButton_9.setBackground(SystemColor.textHighlight);
-		JButton btnNewButton_8 = new JButton("8");
-		btnNewButton_8.setBackground(SystemColor.textHighlight);
-		JButton btnNewButton_7 = new JButton("7");
-		btnNewButton_7.setBackground(SystemColor.textHighlight);
-		JButton btnNewButton_6 = new JButton("6");
-		btnNewButton_6.setBackground(SystemColor.textHighlight);
-		JButton btnNewButton_5 = new JButton("5");
-		btnNewButton_5.setBackground(SystemColor.textHighlight);
-		JButton btnNewButton_4 = new JButton("4");
-		btnNewButton_4.setBackground(SystemColor.textHighlight);
-		JButton btnNewButton_3 = new JButton("3");
-		btnNewButton_3.setBackground(SystemColor.textHighlight);
-		JButton btnNewButton_2 = new JButton("2");
-		btnNewButton_2.setBackground(SystemColor.textHighlight);
-		JButton btnNewButton_1 = new JButton("1");
-		btnNewButton_1.setBackground(SystemColor.textHighlight);
-		JButton btnNewButton = new JButton("0");
-		btnNewButton.setBackground(SystemColor.textHighlight);
-		JButton btnNewButton_10 = new JButton(".");
-		JButton btnNewButton_a5 = new JButton("%");
-		JButton btnNewButton_a4 = new JButton("/");
-		JButton btnNewButton_a3 = new JButton("x");
-		JButton btnNewButton_a2 = new JButton("-");
-		JButton btnNewButton_a1 = new JButton("+");
-		JButton btnNewButton_eq = new JButton("=");
-		btnNewButton_eq.setBackground(Color.ORANGE);
-		JButton btnNewButton_e1 = new JButton("\uF0E7");                           //backspace
-		JButton btnNewButton_e2 = new JButton("C");
-		btnNewButton_e2.setBackground(UIManager.getColor("Button.background"));
-		JButton btnNewButton_l4 = new JButton("ln");
-		JButton btnNewButton_p6 = new JButton("\u221A");                            //square root
-		JButton btnNewButton_l3 = new JButton("log");
-		JButton btnNewButton_p5 = new JButton("x\u00B2");                           //x square
-		JButton btnNewButton_p4 = new JButton("x\u00B3");                           //x cube
-		JButton btnNewButton_p2 = new JButton("x\u02B8");                           //x^y
-		JButton btnNewButton_p9 = new JButton("2\u02E3");                           //2^x
-		JButton btnNewButton_p1 = new JButton("x!");
-		JButton btnNewButton_l2 = new JButton("log\u2090x");                        //log x base y
-		JButton btnNewButton_l1 = new JButton("e\u02E3");                           // e^x
-		JButton btnNewButton_c3 = new JButton("rand");
-		JButton btnNewButton_c1 = new JButton("\u03C0");                            //pi
-		JButton btnNewButton_p8 = new JButton("|x|");
-		JButton btnNewButton_a6 = new JButton("x\u207B\u00B9");                     //x^-1
-		JButton btnNewButton_c2 = new JButton("e");
-		JButton btnNewButton_p10 = new JButton("10\u02E3");                         //10^x
-		JButton btnNewButton_a8 = new JButton(")");
-		JButton btnNewButton_a7 = new JButton("(");
-		JButton btnNewButton_t3 = new JButton("sin");
-		JButton btnNewButton_t2 = new JButton("cos");
-		JButton btnNewButton_t1 = new JButton("tan");
-		JButton btnNewButton_t5 = new JButton("hyp");
-		JButton btnNewButton_t8 = new JButton("inv");
-		JButton btnNewButton_p7 = new JButton("[x]");
-		JButton btnNewButton_m3 = new JButton("MR");
-		JButton btnNewButton_m2 = new JButton("M+");
-		JButton btnNewButton_m1 = new JButton("M-");
-		JButton btnNewButton_m4 = new JButton("MC");
-		JRadioButton rdbtnNewButton_r = new JRadioButton("rad");
-		rdbtnNewButton_r.setSelected(true);
-		JRadioButton rdbtnNewButton_d = new JRadioButton("deg");
-		ButtonGroup bg=new ButtonGroup();  
-		bg.add(rdbtnNewButton_r);
-		bg.add(rdbtnNewButton_d);
-		
-		btnNewButton_9.setFont(new Font("Cambria", Font.BOLD, 20));
-		btnNewButton_8.setFont(new Font("Cambria", Font.BOLD, 20));
-		btnNewButton_7.setFont(new Font("Cambria", Font.BOLD, 20));
-		btnNewButton_6.setFont(new Font("Cambria", Font.BOLD, 20));
-		btnNewButton_5.setFont(new Font("Cambria", Font.BOLD, 20));
-		btnNewButton_4.setFont(new Font("Cambria", Font.BOLD, 20));
-		btnNewButton_3.setFont(new Font("Cambria", Font.BOLD, 20));
-		btnNewButton_2.setFont(new Font("Cambria", Font.BOLD, 20));
-		btnNewButton_1.setFont(new Font("Cambria", Font.BOLD, 20));
-		btnNewButton.setFont(new Font("Cambria", Font.BOLD, 20));
-		btnNewButton_10.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_a3.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_a2.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_a1.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_eq.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_a4.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_e1.setFont(new Font("Wingdings", Font.PLAIN, 15));
-		btnNewButton_e2.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_a5.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_l4.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_p6.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_l3.setFont(new Font("Cambria", Font.PLAIN, 18));
-		btnNewButton_p5.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_l2.setFont(new Font("Cambria", Font.PLAIN, 13));
-		btnNewButton_p4.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_l1.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_p1.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_p2.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_p9.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_c3.setFont(new Font("Cambria", Font.PLAIN, 15));
-		btnNewButton_c1.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_p8.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_a6.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_c2.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_p10.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_a8.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_a7.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_t3.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_t2.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_t1.setFont(new Font("Cambria", Font.PLAIN, 20));
-		btnNewButton_t5.setFont(new Font("Cambria", Font.PLAIN, 18));
-		btnNewButton_t8.setFont(new Font("Cambria", Font.PLAIN, 18));
-		btnNewButton_p7.setFont(new Font("Cambria", Font.PLAIN, 18));
-		btnNewButton_m3.setFont(new Font("Cambria", Font.PLAIN, 18));
-		btnNewButton_m2.setFont(new Font("Cambria", Font.PLAIN, 18));
-		btnNewButton_m1.setFont(new Font("Cambria", Font.PLAIN, 18));
-		btnNewButton_m4.setFont(new Font("Cambria", Font.PLAIN, 18));
-		rdbtnNewButton_r.setFont(new Font("Cambria", Font.PLAIN, 18));
-		rdbtnNewButton_r.setBackground(UIManager.getColor("Button.background"));
-		rdbtnNewButton_d.setFont(new Font("Cambria", Font.PLAIN, 18));
-		rdbtnNewButton_d.setBackground(UIManager.getColor("Button.background"));
-		
-		btnNewButton_9.setBounds(241, 325, 63, 49);
-		btnNewButton_8.setBounds(314, 325, 63, 49);
-		btnNewButton_7.setBounds(387, 325, 63, 49);
-		btnNewButton_6.setBounds(241, 385, 63, 49);
-		btnNewButton_5.setBounds(314, 385, 63, 49);
-		btnNewButton_4.setBounds(387, 385, 63, 49);
-		btnNewButton_3.setBounds(241, 445, 63, 49);
-		btnNewButton_2.setBounds(314, 445, 63, 49);
-		btnNewButton_10.setBounds(387, 505, 63, 49);
-		btnNewButton_1.setBounds(387, 445, 63, 49);
-		btnNewButton.setBounds(314, 505, 63, 49);
-		btnNewButton_a3.setBounds(460, 325, 63, 49);
-		btnNewButton_a2.setBounds(460, 385, 63, 49);
-		btnNewButton_a1.setBounds(460, 445, 63, 49);
-		btnNewButton_eq.setBounds(460, 505, 63, 49); 
-		btnNewButton_a4.setBounds(460, 265, 63, 49);
-		btnNewButton_e1.setBounds(387, 265, 63, 49);
-		btnNewButton_e2.setBounds(314, 265, 63, 49);
-		btnNewButton_a5.setBounds(241, 265, 63, 49);
-		btnNewButton_l4.setBounds(95, 204, 63, 49);
-		btnNewButton_p6.setBounds(168, 265, 63, 49);
-		btnNewButton_l3.setBounds(95, 265, 63, 49);
-		btnNewButton_p5.setBounds(168, 325, 63, 49);
-		btnNewButton_l2.setBounds(95, 325, 63, 49);
-		btnNewButton_p4.setBounds(168, 385, 63, 49);
-		btnNewButton_l1.setBounds(95, 385, 63, 49);
-		btnNewButton_p1.setBounds(168, 505, 63, 49);
-		btnNewButton_p2.setBounds(168, 445, 63, 49);
-		btnNewButton_p9.setBounds(95, 505, 63, 49);
-		btnNewButton_c3.setBounds(387, 205, 63, 49);
-		btnNewButton_c1.setBounds(460, 144, 63, 49);
-		btnNewButton_p8.setBounds(241, 505, 63, 49);
-		btnNewButton_a6.setBounds(460, 204, 63, 49);
-		btnNewButton_c2.setBounds(387, 144, 63, 49);
-		btnNewButton_p10.setBounds(95, 445, 63, 49);
-		btnNewButton_a8.setBounds(314, 204, 63, 49);
-		btnNewButton_a7.setBounds(241, 204, 63, 49);
-		btnNewButton_t3.setBounds(22, 385, 63, 49);
-		btnNewButton_t2.setBounds(22, 445, 63, 49);
-		btnNewButton_t1.setBounds(22, 505, 63, 49);
-		btnNewButton_t5.setBounds(22, 265, 63, 49);
-		btnNewButton_t8.setBounds(22, 325, 63, 49);
-		btnNewButton_p7.setBounds(168, 204, 63, 49);
-		btnNewButton_m3.setBounds(168, 145, 63, 49);
-		btnNewButton_m2.setBounds(241, 144, 63, 49);
-		btnNewButton_m1.setBounds(314, 144, 63, 49);
-		btnNewButton_m4.setBounds(95, 144, 63, 49);
-		rdbtnNewButton_r.setBounds(22, 144, 63, 49);
-		rdbtnNewButton_d.setBounds(22, 204, 63, 49);
-		
-		frame.getContentPane().add(btnNewButton_9);
-		frame.getContentPane().add(btnNewButton_8);
-		frame.getContentPane().add(btnNewButton_7);	
-		frame.getContentPane().add(btnNewButton_6);
-		frame.getContentPane().add(btnNewButton_5);
-		frame.getContentPane().add(btnNewButton_4);
-		frame.getContentPane().add(btnNewButton_3);
-		frame.getContentPane().add(btnNewButton_2);
-		frame.getContentPane().add(btnNewButton_10);
-		frame.getContentPane().add(btnNewButton_1);
-		frame.getContentPane().add(btnNewButton);
-		frame.getContentPane().add(btnNewButton_a3);
-		frame.getContentPane().add(btnNewButton_a2);
-		frame.getContentPane().add(btnNewButton_a1);
-		frame.getContentPane().add(btnNewButton_eq);
-		frame.getContentPane().add(btnNewButton_a4);
-		frame.getContentPane().add(btnNewButton_e1);
-		frame.getContentPane().add(btnNewButton_e2);
-		frame.getContentPane().add(btnNewButton_a5);
-		frame.getContentPane().add(btnNewButton_l4);
-		frame.getContentPane().add(btnNewButton_p6);
-		frame.getContentPane().add(btnNewButton_l3);
-		frame.getContentPane().add(btnNewButton_p5);
-		frame.getContentPane().add(btnNewButton_l2);
-		frame.getContentPane().add(btnNewButton_p4);
-		frame.getContentPane().add(btnNewButton_l1);
-		frame.getContentPane().add(btnNewButton_p1);
-		frame.getContentPane().add(btnNewButton_p2);
-		frame.getContentPane().add(btnNewButton_p9);
-		frame.getContentPane().add(btnNewButton_c3);
-		frame.getContentPane().add(btnNewButton_c1);
-		frame.getContentPane().add(btnNewButton_p8);
-		frame.getContentPane().add(btnNewButton_a6);
-		frame.getContentPane().add(btnNewButton_c2);
-		frame.getContentPane().add(btnNewButton_p10);
-		frame.getContentPane().add(btnNewButton_a8);
-		frame.getContentPane().add(btnNewButton_a7);
-		frame.getContentPane().add(btnNewButton_t3);
-		frame.getContentPane().add(btnNewButton_t2);
-		frame.getContentPane().add(btnNewButton_t1);		
-		frame.getContentPane().add(btnNewButton_t5);
-		frame.getContentPane().add(btnNewButton_t8);
-		frame.getContentPane().add(btnNewButton_p7);
-		frame.getContentPane().add(btnNewButton_m3);
-		frame.getContentPane().add(btnNewButton_m2);
-		frame.getContentPane().add(btnNewButton_m1);
-		frame.getContentPane().add(btnNewButton_m4);
-		frame.getContentPane().add(rdbtnNewButton_r);
-		frame.getContentPane().add(rdbtnNewButton_d);
-		
 		JLabel label = new JLabel("");
 		label.setHorizontalAlignment(SwingConstants.TRAILING);
 		label.setForeground(Color.WHITE);
@@ -297,101 +82,343 @@ public class scientificCalculator extends trigonometry{
 		frame.getContentPane().add(label);
 		
 		
+		//JButtons
+		JButton button_9 = new JButton("9");
+		JButton button_8 = new JButton("8");
+		JButton button_7 = new JButton("7");
+		JButton button_6 = new JButton("6");
+		JButton button_5 = new JButton("5");
+		JButton button_4 = new JButton("4");
+		JButton button_3 = new JButton("3");
+		JButton button_2 = new JButton("2");
+		JButton button_1 = new JButton("1");
+		JButton button_0 = new JButton("0");
+		JButton button_dot = new JButton(".");
+		JButton button_rem = new JButton("%");
+		JButton button_Div = new JButton("/");
+		JButton button_Mul = new JButton("x");
+		JButton button_Sub = new JButton("-");
+		JButton button_Add = new JButton("+");
+		JButton button_Eq = new JButton("=");
+		JButton button_Del = new JButton("\uF0E7");                           //backspace
+		JButton button_clr = new JButton("C");
+		JButton button_ln = new JButton("ln");
+		JButton button_sqrt = new JButton("\u221A");                          //square root
+		JButton button_log = new JButton("log");
+		JButton button_x2 = new JButton("x\u00B2");                           //x square
+		JButton button_x3 = new JButton("x\u00B3");                           //x cube
+		JButton button_xy = new JButton("x\u02B8");                           //x^y
+		JButton button_2x = new JButton("2\u02E3");                           //2^x
+		JButton bButton_fact = new JButton("x!");
+		JButton button_logxy = new JButton("log\u2090x");                     //log x base y
+		JButton button_ex = new JButton("e\u02E3");                           // e^x
+		JButton button_rand = new JButton("rand");
+		JButton button_pi = new JButton("\u03C0");                            //pi
+		JButton button_mod = new JButton("|x|");
+		JButton button_xinv = new JButton("x\u207B\u00B9");                   //x^-1
+		JButton button_e = new JButton("e");
+		JButton button_10x = new JButton("10\u02E3");                         //10^x
+		JButton button_cls = new JButton(")");
+		JButton button_open = new JButton("(");
+		JButton button_sin = new JButton("sin");
+		JButton button_cos = new JButton("cos");
+		JButton button_tan = new JButton("tan");
+		JButton button_hyp = new JButton("hyp");
+		JButton button_inv = new JButton("inv");
+		JButton button_round = new JButton("[x]");
+		JButton button_memRcl = new JButton("MR");
+		JButton button_memAdd = new JButton("M+");
+		JButton button_memSub = new JButton("M-");
+		JButton button_memClr = new JButton("MC");
+		
+		//radioButtons
+		JRadioButton rdButton_rad = new JRadioButton("rad");
+		JRadioButton rdButton_deg = new JRadioButton("deg");
+		rdButton_rad.setSelected(true);
+		
+		//ButtonGroup
+		ButtonGroup typ=new ButtonGroup();  
+		typ.add(rdButton_rad);
+		typ.add(rdButton_deg);
+		
+		
+		//inner class for initializing JButton properties
+		class buttonProp {
+			
+			void initProp() {
+				
+				//setting font for buttons
+				button_9.setFont(new Font("Cambria", Font.BOLD, 20));
+		        button_8.setFont(new Font("Cambria", Font.BOLD, 20));
+		        button_7.setFont(new Font("Cambria", Font.BOLD, 20));
+		        button_6.setFont(new Font("Cambria", Font.BOLD, 20));
+		        button_5.setFont(new Font("Cambria", Font.BOLD, 20));
+		        button_4.setFont(new Font("Cambria", Font.BOLD, 20));
+		        button_3.setFont(new Font("Cambria", Font.BOLD, 20));
+		        button_2.setFont(new Font("Cambria", Font.BOLD, 20));
+		        button_1.setFont(new Font("Cambria", Font.BOLD, 20));
+		        button_0.setFont(new Font("Cambria", Font.BOLD, 20));
+		        button_dot.setFont(new Font("Cambria", Font.PLAIN, 20));
+		        button_Mul.setFont(new Font("Cambria", Font.PLAIN, 20));
+		        button_Sub.setFont(new Font("Cambria", Font.PLAIN, 20));
+		        button_Add.setFont(new Font("Cambria", Font.PLAIN, 20));
+		        button_Eq.setFont(new Font("Cambria", Font.PLAIN, 20));
+		        button_Div.setFont(new Font("Cambria", Font.PLAIN, 20));
+		        button_Del.setFont(new Font("Wingdings", Font.PLAIN, 15));
+		        button_clr.setFont(new Font("Cambria", Font.PLAIN, 20));
+		        button_rem.setFont(new Font("Cambria", Font.PLAIN, 20));
+		        button_ln.setFont(new Font("Cambria", Font.PLAIN, 20));
+		        button_sqrt.setFont(new Font("Cambria", Font.PLAIN, 20));
+		        button_log.setFont(new Font("Cambria", Font.PLAIN, 18));
+		        button_x2.setFont(new Font("Cambria", Font.PLAIN, 20));
+		        button_logxy.setFont(new Font("Cambria", Font.PLAIN, 13));
+		        button_x3.setFont(new Font("Cambria", Font.PLAIN, 20));
+		        button_ex.setFont(new Font("Cambria", Font.PLAIN, 20));
+		        bButton_fact.setFont(new Font("Cambria", Font.PLAIN, 20));
+				button_xy.setFont(new Font("Cambria", Font.PLAIN, 20));
+				button_2x.setFont(new Font("Cambria", Font.PLAIN, 20));
+				button_rand.setFont(new Font("Cambria", Font.PLAIN, 15));
+				button_pi.setFont(new Font("Cambria", Font.PLAIN, 20));
+				button_mod.setFont(new Font("Cambria", Font.PLAIN, 20));
+				button_xinv.setFont(new Font("Cambria", Font.PLAIN, 20));
+				button_e.setFont(new Font("Cambria", Font.PLAIN, 20));
+				button_10x.setFont(new Font("Cambria", Font.PLAIN, 20));
+				button_cls.setFont(new Font("Cambria", Font.PLAIN, 20));
+				button_open.setFont(new Font("Cambria", Font.PLAIN, 20));
+				button_sin.setFont(new Font("Cambria", Font.PLAIN, 20));
+				button_cos.setFont(new Font("Cambria", Font.PLAIN, 20));
+				button_tan.setFont(new Font("Cambria", Font.PLAIN, 20));
+				button_hyp.setFont(new Font("Cambria", Font.PLAIN, 18));
+				button_inv.setFont(new Font("Cambria", Font.PLAIN, 18));
+				button_round.setFont(new Font("Cambria", Font.PLAIN, 18));
+				button_memRcl.setFont(new Font("Cambria", Font.PLAIN, 18));
+				button_memAdd.setFont(new Font("Cambria", Font.PLAIN, 18));
+				button_memSub.setFont(new Font("Cambria", Font.PLAIN, 18));
+				button_memClr.setFont(new Font("Cambria", Font.PLAIN, 18));
+				rdButton_rad.setFont(new Font("Cambria", Font.PLAIN, 18));
+				rdButton_deg.setFont(new Font("Cambria", Font.PLAIN, 18));
+				
+				//setting bg color for buttons 
+				button_9.setBackground(SystemColor.textHighlight);
+				button_8.setBackground(SystemColor.textHighlight);
+				button_7.setBackground(SystemColor.textHighlight);
+				button_6.setBackground(SystemColor.textHighlight);
+				button_5.setBackground(SystemColor.textHighlight);
+				button_4.setBackground(SystemColor.textHighlight);
+				button_3.setBackground(SystemColor.textHighlight);
+				button_2.setBackground(SystemColor.textHighlight);
+				button_1.setBackground(SystemColor.textHighlight);
+				button_0.setBackground(SystemColor.textHighlight);
+				button_Eq.setBackground(Color.ORANGE);
+				button_clr.setBackground(UIManager.getColor("Button.background"));
+				rdButton_rad.setBackground(UIManager.getColor("Button.background"));
+				rdButton_deg.setBackground(UIManager.getColor("Button.background"));
+				
+				//setting the bounds of the buttons relative to the frame
+				button_9.setBounds(241, 325, 63, 49);
+				button_8.setBounds(314, 325, 63, 49);
+				button_7.setBounds(387, 325, 63, 49);
+				button_6.setBounds(241, 385, 63, 49);
+				button_5.setBounds(314, 385, 63, 49);
+				button_4.setBounds(387, 385, 63, 49);
+				button_3.setBounds(241, 445, 63, 49);
+				button_2.setBounds(314, 445, 63, 49);
+				button_dot.setBounds(387, 505, 63, 49);
+				button_1.setBounds(387, 445, 63, 49);
+				button_0.setBounds(314, 505, 63, 49);
+				button_Mul.setBounds(460, 325, 63, 49);
+				button_Sub.setBounds(460, 385, 63, 49);
+				button_Add.setBounds(460, 445, 63, 49);
+				button_Eq.setBounds(460, 505, 63, 49); 
+				button_Div.setBounds(460, 265, 63, 49);
+				button_Del.setBounds(387, 265, 63, 49);
+				button_clr.setBounds(314, 265, 63, 49);
+				button_rem.setBounds(241, 265, 63, 49);
+				button_ln.setBounds(95, 204, 63, 49);
+				button_sqrt.setBounds(168, 265, 63, 49);
+				button_log.setBounds(95, 265, 63, 49);
+				button_x2.setBounds(168, 325, 63, 49);
+				button_logxy.setBounds(95, 325, 63, 49);
+				button_x3.setBounds(168, 385, 63, 49);
+				button_ex.setBounds(95, 385, 63, 49);
+				bButton_fact.setBounds(168, 505, 63, 49);
+				button_xy.setBounds(168, 445, 63, 49);
+				button_2x.setBounds(95, 505, 63, 49);
+				button_rand.setBounds(387, 205, 63, 49);
+				button_pi.setBounds(460, 144, 63, 49);
+				button_mod.setBounds(241, 505, 63, 49);
+				button_xinv.setBounds(460, 204, 63, 49);
+				button_e.setBounds(387, 144, 63, 49);
+				button_10x.setBounds(95, 445, 63, 49);
+				button_cls.setBounds(314, 204, 63, 49);
+				button_open.setBounds(241, 204, 63, 49);
+				button_sin.setBounds(22, 385, 63, 49);
+				button_cos.setBounds(22, 445, 63, 49);
+				button_tan.setBounds(22, 505, 63, 49);
+				button_hyp.setBounds(22, 265, 63, 49);
+				button_inv.setBounds(22, 325, 63, 49);
+				button_round.setBounds(168, 204, 63, 49);
+				button_memRcl.setBounds(168, 145, 63, 49);
+				button_memAdd.setBounds(241, 144, 63, 49);
+				button_memSub.setBounds(314, 144, 63, 49);
+				button_memClr.setBounds(95, 144, 63, 49);
+				rdButton_rad.setBounds(22, 144, 63, 49);
+				rdButton_deg.setBounds(22, 204, 63, 49);
+				
+				//adding all contents in the frame
+				frame.getContentPane().add(button_9);
+				frame.getContentPane().add(button_8);
+				frame.getContentPane().add(button_7);	
+				frame.getContentPane().add(button_6);
+				frame.getContentPane().add(button_5);
+				frame.getContentPane().add(button_4);
+				frame.getContentPane().add(button_3);
+				frame.getContentPane().add(button_2);
+				frame.getContentPane().add(button_dot);
+				frame.getContentPane().add(button_1);
+				frame.getContentPane().add(button_0);
+				frame.getContentPane().add(button_Mul);
+				frame.getContentPane().add(button_Sub);
+				frame.getContentPane().add(button_Add);
+				frame.getContentPane().add(button_Eq);
+				frame.getContentPane().add(button_Div);
+				frame.getContentPane().add(button_Del);
+				frame.getContentPane().add(button_clr);
+				frame.getContentPane().add(button_rem);
+				frame.getContentPane().add(button_ln);
+				frame.getContentPane().add(button_sqrt);
+				frame.getContentPane().add(button_log);
+				frame.getContentPane().add(button_x2);
+				frame.getContentPane().add(button_logxy);
+				frame.getContentPane().add(button_x3);
+				frame.getContentPane().add(button_ex);
+				frame.getContentPane().add(bButton_fact);
+				frame.getContentPane().add(button_xy);
+				frame.getContentPane().add(button_2x);
+				frame.getContentPane().add(button_rand);
+				frame.getContentPane().add(button_pi);
+				frame.getContentPane().add(button_mod);
+				frame.getContentPane().add(button_xinv);
+				frame.getContentPane().add(button_e);
+				frame.getContentPane().add(button_10x);
+				frame.getContentPane().add(button_cls);
+				frame.getContentPane().add(button_open);
+				frame.getContentPane().add(button_sin);
+				frame.getContentPane().add(button_cos);
+				frame.getContentPane().add(button_tan);		
+				frame.getContentPane().add(button_hyp);
+				frame.getContentPane().add(button_inv);
+				frame.getContentPane().add(button_round);
+				frame.getContentPane().add(button_memRcl);
+				frame.getContentPane().add(button_memAdd);
+				frame.getContentPane().add(button_memSub);
+				frame.getContentPane().add(button_memClr);
+				frame.getContentPane().add(rdButton_rad);
+				frame.getContentPane().add(rdButton_deg);
+				}
+			}
+		
+		//creating object for inner class buttonProp
+		buttonProp objProp=new buttonProp();
+		objProp.initProp();
+		
+		
+		//inner class to specify the action to perform on-click
 		class actionListener {
 			
 			void action() {
 				
-				btnNewButton_9.addActionListener(new ActionListener() {
+				button_9.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						setNumber(btnNewButton_9);
+						setNumber(button_9);
 					}
 				});
 				
-				btnNewButton_8.addActionListener(new ActionListener() {
+				button_8.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						setNumber(btnNewButton_8);
+						setNumber(button_8);
 					}
 				});
 				
-				btnNewButton_7.addActionListener(new ActionListener() {
+				button_7.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						setNumber(btnNewButton_7);
+						setNumber(button_7);
 					}
 				});
 				
-				btnNewButton_6.addActionListener(new ActionListener() {
+				button_6.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						setNumber(btnNewButton_6);
+						setNumber(button_6);
 					}
 				});
 				
-				btnNewButton_5.addActionListener(new ActionListener() {
+				button_5.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						setNumber(btnNewButton_5);
+						setNumber(button_5);
 					}
 				});
 				
-				btnNewButton_4.addActionListener(new ActionListener() {
+				button_4.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						setNumber(btnNewButton_4);
+						setNumber(button_4);
 					}
 				});
 				
-				btnNewButton_3.addActionListener(new ActionListener() {
+				button_3.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						setNumber(btnNewButton_3);
+						setNumber(button_3);
 					}
 				});
 				
-				btnNewButton_2.addActionListener(new ActionListener() {
+				button_2.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						setNumber(btnNewButton_2);
+						setNumber(button_2);
 					}
 				});
 				
-				btnNewButton_1.addActionListener(new ActionListener() {
+				button_1.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						setNumber(btnNewButton_1);
+						setNumber(button_1);
 					}
 				});
 				
-				btnNewButton.addActionListener(new ActionListener() {
+				button_0.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						setNumber(btnNewButton);
+						setNumber(button_0);
 					}
 				});
 				
-				btnNewButton_10.addActionListener(new ActionListener() {
+				button_dot.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						setNumber(btnNewButton_10);
+						setNumber(button_dot);
 					}
 				});
 				
-				btnNewButton_a3.addActionListener(new ActionListener() {
+				button_Mul.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
-						op=btnNewButton_a3;
+						op=button_Mul;
 						label.setText(String.valueOf(firstNum)+"*");
 					}
 				});
 				
-				btnNewButton_a2.addActionListener(new ActionListener() {
+				button_Sub.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
-						op=btnNewButton_a2;
+						op=button_Sub;
 						label.setText(String.valueOf(firstNum)+String.valueOf(op.getText()));
 					}
 				});
 				
-				btnNewButton_a1.addActionListener(new ActionListener() {
+				button_Add.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
-						op=btnNewButton_a1;
+						op=button_Add;
 						label.setText(String.valueOf(firstNum)+String.valueOf(op.getText()));
 					}
 				});
 				
-				btnNewButton_eq.addActionListener(new ActionListener() {
+				button_Eq.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						if (op==null) {
 							textField.setText(String.valueOf(result));
@@ -399,20 +426,20 @@ public class scientificCalculator extends trigonometry{
 						else {
 							secondNum=getNum();
 						    doOperation(op);
-						    label.setText(label.getText()+String.valueOf(secondNum));
+						    label.setText(label.getText()+String.valueOf(secondNum)+"=");
 						}    
 					}
 				});
 				
-				btnNewButton_a4.addActionListener(new ActionListener() {
+				button_Div.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
-						op=btnNewButton_a4;
+						op=button_Div;
 						label.setText(String.valueOf(firstNum)+String.valueOf(op.getText()));
 					}
 				});
 				
-				btnNewButton_e1.addActionListener(new ActionListener() {
+				button_Del.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						String backSpace=null;
 						
@@ -425,7 +452,7 @@ public class scientificCalculator extends trigonometry{
 					}
 				});
 				
-				btnNewButton_e2.addActionListener(new ActionListener() {
+				button_clr.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						textField.setText("");
 						label.setText("");
@@ -439,15 +466,15 @@ public class scientificCalculator extends trigonometry{
 					}
 				});
 				
-				btnNewButton_a5.addActionListener(new ActionListener() {
+				button_rem.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
-						op=btnNewButton_a5;
+						op=button_rem;
 						label.setText(String.valueOf(firstNum)+String.valueOf(op.getText()));
 					}
 				});
 				
-				btnNewButton_l4.addActionListener(new ActionListener() {
+				button_ln.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("ln");
@@ -455,7 +482,7 @@ public class scientificCalculator extends trigonometry{
 					}
 				});
 				
-				btnNewButton_p6.addActionListener(new ActionListener() {
+				button_sqrt.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("sqrt");
@@ -463,7 +490,7 @@ public class scientificCalculator extends trigonometry{
 					}
 				});
 				
-				btnNewButton_l3.addActionListener(new ActionListener() {
+				button_log.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("log");
@@ -471,7 +498,7 @@ public class scientificCalculator extends trigonometry{
 					}
 				});
 				
-				btnNewButton_p5.addActionListener(new ActionListener() {
+				button_x2.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("x^2");
@@ -479,15 +506,15 @@ public class scientificCalculator extends trigonometry{
 					}
 				});
 				
-				btnNewButton_l2.addActionListener(new ActionListener() {
+				button_logxy.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
-						op=btnNewButton_l2;
+						op=button_logxy;
 						label.setText("log("+String.valueOf(firstNum)+") base");
 					}
 				});
 				
-				btnNewButton_p4.addActionListener(new ActionListener() {
+				button_x3.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("x^3");
@@ -495,7 +522,7 @@ public class scientificCalculator extends trigonometry{
 					}
 				});
 				
-				btnNewButton_l1.addActionListener(new ActionListener() {
+				button_ex.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("exp");
@@ -503,15 +530,15 @@ public class scientificCalculator extends trigonometry{
 					}
 				});
 				
-				btnNewButton_p2.addActionListener(new ActionListener() {
+				button_xy.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
-						op=btnNewButton_p2;
+						op=button_xy;
 						label.setText(String.valueOf(firstNum)+"^");
 					}
 				});
 				
-				btnNewButton_p9.addActionListener(new ActionListener() {
+				button_2x.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("2^x");
@@ -519,7 +546,7 @@ public class scientificCalculator extends trigonometry{
 					}
 				});
 				
-				btnNewButton_p1.addActionListener(new ActionListener() {
+				bButton_fact.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("xfact");
@@ -527,21 +554,21 @@ public class scientificCalculator extends trigonometry{
 					}
 				});
 				
-				btnNewButton_c3.addActionListener(new ActionListener() {
+				button_rand.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						doOperation("random");
 						label.setText("random");
 					}
 				});
 				
-				btnNewButton_c1.addActionListener(new ActionListener() {
+				button_pi.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						textField.setText(String.valueOf(pi));
 						label.setText("\u03C0");
 					}
 				});
 				
-				btnNewButton_p8.addActionListener(new ActionListener() {
+				button_mod.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("mod");
@@ -549,7 +576,7 @@ public class scientificCalculator extends trigonometry{
 					}
 				});
 				
-				btnNewButton_a6.addActionListener(new ActionListener() {
+				button_xinv.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("inverse");
@@ -557,14 +584,14 @@ public class scientificCalculator extends trigonometry{
 					}
 				});
 				
-				btnNewButton_c2.addActionListener(new ActionListener() {
+				button_e.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						textField.setText(String.valueOf(exponent));
 						label.setText("e");
 					}
 				});
 				
-				btnNewButton_p10.addActionListener(new ActionListener() {
+				button_10x.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("10^x");
@@ -572,75 +599,86 @@ public class scientificCalculator extends trigonometry{
 					}
 				});
 				
-				btnNewButton_a8.addActionListener(new ActionListener() {
+				button_cls.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						if(i>=0) {
-							if (i==previousNum.size()) {}
+						
+						if(inc>=0) {
+							if (inc==previousNum.size()) {}
 							else {
-								firstNum=Double.parseDouble(previousNum.get(i));
+								firstNum=Double.parseDouble(previousNum.get(inc));
 								secondNum=getNum();
-								doOperation(opNow.get(i));
+								doOperation(opNow.get(inc));
 							}
-							i-=1;
+							inc-=1;
 							label.setText(")");
 						}
+						
 						else {
 							previousNum.clear();
 							opNow.clear();
 							firstNum=0;
 							secondNum=0;
-							op=btnNewButton_a1;
+							op=button_Add;
 						}
 					}
 				});
 				
-				btnNewButton_a7.addActionListener(new ActionListener() {
+				button_open.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
+						
 						if(textField.getText().equals("")) {
+							
 							if(op==null || label.getText().equals("(")) {
-						    	opNow.add(btnNewButton_a1);
+						    	opNow.add(button_Add);
 							    previousNum.add(String.valueOf(0));
 						    }
+							
 						    else {
 							    opNow.add(op);
 						        previousNum.add(String.valueOf(firstNum));
 						    }
-						    i=previousNum.size()-1;
+						    inc=previousNum.size()-1;
 						    label.setText("(");
 						}
+						
 						else 
 							textField.setText("Select operator");
 					}
 				});
 				
-				btnNewButton_t3.addActionListener(new ActionListener() {
+				button_sin.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
+						
 						if (angle.equals("degree")) {
 							if (type.equals("hyperbole"))
 								doOperation("sindh");
 							else
 								doOperation("sind");
 						}
+						
 						else {
 							if (type.equals("hyperbole")) 
 								doOperation("sinh");
 							else
 								doOperation("sin");
 						}
+						
 						label.setText("sin("+String.valueOf(firstNum)+")");
 					}
 				});
 				
-				btnNewButton_t2.addActionListener(new ActionListener() {
+				button_cos.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
+						
 						if (angle.equals("degree")) {
 							if (type.equals("hyperbole")) 
 								doOperation("cosdh");
 							else
 								doOperation("cosd");
 						}
+						
 						else {
 							if (type.equals("hyperbole"))
 								doOperation("cosh");
@@ -648,18 +686,22 @@ public class scientificCalculator extends trigonometry{
 								doOperation("cos");
 						}
 						label.setText("cos("+String.valueOf(firstNum)+")");
+						
 					}
 				});
 				
-				btnNewButton_t1.addActionListener(new ActionListener() {
+				button_tan.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
+						
+		
 						if (angle.equals("degree")) {
 							if (type.equals("hyperbole"))
 								doOperation("tandh");
 							else
 								doOperation("tand");
 						}
+						
 						else {
 							if (type.equals("hyperbole")) 
 								doOperation("tanh");
@@ -667,49 +709,50 @@ public class scientificCalculator extends trigonometry{
 								doOperation("tan");
 						}
 						label.setText("tan("+String.valueOf(firstNum)+")");
+						
 					}
 				});
 				
-				btnNewButton_t5.addActionListener(new ActionListener() {
+				button_hyp.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						if (type.equals("hyperbole")) {
 							type="";
-							btnNewButton_t5.setFont(new Font("Cambria", Font.PLAIN, 18));
+							button_hyp.setFont(new Font("Cambria", Font.PLAIN, 18));
 						}
 						else {
 							type="hyperbole";
-							btnNewButton_t5.setFont(new Font("Cambria", Font.BOLD, 17));
+							button_hyp.setFont(new Font("Cambria", Font.BOLD, 17));
 						}
 					}
 				});
 				
-				btnNewButton_t8.addActionListener(new ActionListener() {
+				button_inv.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						if (invType.equals("inv")) {
 							invType="";
-							btnNewButton_t8.setFont(new Font("Cambria", Font.PLAIN, 18));
+							button_inv.setFont(new Font("Cambria", Font.PLAIN, 18));
 						}
 						else {
 							invType="inv";
-							btnNewButton_t8.setFont(new Font("Cambria", Font.BOLD, 17));
+							button_inv.setFont(new Font("Cambria", Font.BOLD, 17));
 						}
 					}
 				});
 				
-				btnNewButton_p7.addActionListener(new ActionListener() {
+				button_round.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						doOperation("floor");
 					}
 				});
 				
-				btnNewButton_m3.addActionListener(new ActionListener() {
+				button_memRcl.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						textField.setText(String.valueOf(memory));
 					}
 				});
 				
-				btnNewButton_m2.addActionListener(new ActionListener() {
+				button_memAdd.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=Double.parseDouble(textField.getText());
 						memory+=firstNum;
@@ -717,7 +760,7 @@ public class scientificCalculator extends trigonometry{
 					}
 				});
 				
-				btnNewButton_m1.addActionListener(new ActionListener() {
+				button_memSub.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						firstNum=Double.parseDouble(textField.getText());
 						memory-=firstNum;
@@ -725,27 +768,29 @@ public class scientificCalculator extends trigonometry{
 					}
 				});
 				
-				btnNewButton_m4.addActionListener(new ActionListener() {
+				button_memClr.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						memory=0;
 						textField.setText(null);
 					}
 				});
 				
-				rdbtnNewButton_r.addActionListener(new ActionListener() {
+				rdButton_rad.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						angle="radian";
 					}
 				});
 				
-				rdbtnNewButton_d.addActionListener(new ActionListener() {
+				rdButton_deg.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						angle="degree";
 					}
 				});
 			}
 		}
-		actionListener obj = new actionListener();
-		obj.action();
+		
+		//creating object for class actionListener
+		actionListener objListen = new actionListener();
+		objListen.action();
 	}
 }
