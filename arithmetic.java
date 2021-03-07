@@ -2,7 +2,7 @@ import javax.swing.JButton;
 
 class arithmetic extends basicValues {                  
 	
-	arithmetic(){
+	protected arithmetic(){
 		super();                                        //Using super keyword to invoke the super class basicValues' constructor 
 	}
 	

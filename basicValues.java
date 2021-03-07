@@ -15,7 +15,7 @@ abstract class basicValues {                            //Super class
 	final double pi;                                    
 	final double exponent;
 	
-	basicValues() {
+	protected basicValues() {
 		
 		firstNum=0;
 		secondNum=0;
@@ -27,7 +27,7 @@ abstract class basicValues {                            //Super class
 		this.exponent=Math.E;
 	}
 	
-	static double getNum() {
+	static protected double getNum() {
 		double num=0;
 		String text="";
 		if (textField.getText().equals(""))
@@ -44,11 +44,12 @@ abstract class basicValues {                            //Super class
 		return num;
 	}
 	
-	static void setNumber(JButton name) {
+	static protected void setNumber(JButton name) {
 		String number=textField.getText()+name.getText();
 		textField.setText(number);
 	}
 	
 	abstract void doOperation(String operator);
 	abstract void doOperation(JButton operator);
+	
 }

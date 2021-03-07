@@ -49,7 +49,7 @@ public class scientificCalculator extends trigonometry{
 	 */
 	
 	//constructor
-	public scientificCalculator() {
+	protected scientificCalculator() {
 		super("radian");
 		memory=0;
 		inc=-1;
@@ -60,7 +60,7 @@ public class scientificCalculator extends trigonometry{
 	void calculator() {
 		
 		frame = new JFrame();
-		frame.getContentPane().setBackground(UIManager.getColor("Button.foreground"));
+		frame.getContentPane().setBackground(SystemColor.menu);
 		frame.setTitle("Scientific Calculator");
 		frame.getContentPane().setFont(new Font("Arial", Font.PLAIN, 14));
 		frame.setBounds(100, 100, 560, 617);
@@ -74,9 +74,9 @@ public class scientificCalculator extends trigonometry{
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		JLabel label = new JLabel("");
+		JLabel label = new JLabel("Welcome!");
 		label.setHorizontalAlignment(SwingConstants.TRAILING);
-		label.setForeground(Color.WHITE);
+		label.setForeground(SystemColor.desktop);
 		label.setFont(new Font("Cambria Math", Font.PLAIN, 20));
 		label.setBounds(22, 22, 501, 37);
 		frame.getContentPane().add(label);
@@ -211,8 +211,8 @@ public class scientificCalculator extends trigonometry{
 				button_0.setBackground(SystemColor.textHighlight);
 				button_Eq.setBackground(Color.ORANGE);
 				button_clr.setBackground(UIManager.getColor("Button.background"));
-				rdButton_rad.setBackground(UIManager.getColor("Button.background"));
-				rdButton_deg.setBackground(UIManager.getColor("Button.background"));
+				rdButton_rad.setBackground(SystemColor.inactiveCaption);
+				rdButton_deg.setBackground(SystemColor.inactiveCaption);
 				
 				//setting the bounds of the buttons relative to the frame
 				button_9.setBounds(241, 325, 63, 49);

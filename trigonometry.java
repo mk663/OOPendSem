@@ -5,7 +5,7 @@ class trigonometry extends arithmetic {
 	static String type;                                     //Specifying whether it is hyperbole function
 	static String invType;
 	
-	trigonometry(String ang) {
+	protected trigonometry(String ang) {
 		super();
 		angle=ang;
 		type="";
