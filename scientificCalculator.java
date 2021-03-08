@@ -758,6 +758,7 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						memory=0;
 						textField.setText(null);
+						label.setText("");
 					}
 				});
 				
