@@ -43,21 +43,21 @@ class trigonometry extends arithmetic {
 			if (invType.equals("inv"))
 				result=Math.toDegrees(Math.asin(firstNum));
 			else
-				result=Math.toDegrees(Math.sin(firstNum));
+				result=Math.sin(Math.toRadians(firstNum));
 			break;
 			
 		case "cosd":
 			if (invType.equals("inv"))
 				result=Math.toDegrees(Math.acos(firstNum));
 			else
-				result=Math.toDegrees(Math.cos(firstNum));
+				result=Math.cos(Math.toRadians(firstNum));
 			break;
 			
 		case "tand":
 			if (invType.equals("inv"))
 				result=Math.toDegrees(Math.atan(firstNum));
 			else
-				result=Math.toDegrees(Math.tan(firstNum));
+				result=Math.tan(Math.toRadians(firstNum));
 			break;
 			
 		case "sinh":
@@ -80,27 +80,7 @@ class trigonometry extends arithmetic {
 			else
 				result=Math.tanh(firstNum);
 			break;
-			
-		case "sindh":
-			if (invType.equals("inv"))
-				result=Math.log(firstNum + Math.sqrt(firstNum*firstNum + 1.0));
-			else
-				result=Math.toDegrees(Math.sinh(firstNum));
-			break;
-			
-		case "cosdh":
-			if (invType.equals("inv"))
-				 result=Math.log(firstNum + Math.sqrt(firstNum*firstNum - 1.0));
-			else
-				result=Math.toDegrees(Math.cosh(firstNum));
-			break;
-			
-		case "tandh":
-			if (invType.equals("inv"))
-				result=0.5*Math.log((1.0+firstNum)/(1.0-firstNum));
-			else
-				result=Math.toDegrees(Math.tanh(firstNum));
-			break;
+
 			
 		}	
 		

@@ -74,7 +74,7 @@ public class scientificCalculator extends trigonometry{
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		JLabel label = new JLabel("Welcome!");
+		JLabel label = new JLabel("0.0");
 		label.setHorizontalAlignment(SwingConstants.TRAILING);
 		label.setForeground(SystemColor.desktop);
 		label.setFont(new Font("Cambria Math", Font.PLAIN, 20));
@@ -650,19 +650,14 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						
-						if (angle.equals("degree")) {
-							if (type.equals("hyperbole"))
-								doOperation("sindh");
-							else
-								doOperation("sind");
-						}
+						if (type.equals("hyperbole")) 
+							doOperation("sinh");
 						
-						else {
-							if (type.equals("hyperbole")) 
-								doOperation("sinh");
-							else
-								doOperation("sin");
-						}
+						else if (angle.equals("degree")) 
+							doOperation("sind");
+						
+						else 
+						    doOperation("sin");
 						
 						label.setText("sin("+String.valueOf(firstNum)+")");
 					}
@@ -672,19 +667,15 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						
-						if (angle.equals("degree")) {
-							if (type.equals("hyperbole")) 
-								doOperation("cosdh");
-							else
-								doOperation("cosd");
-						}
+						if (type.equals("hyperbole")) 
+							doOperation("cosh");
 						
-						else {
-							if (type.equals("hyperbole"))
-								doOperation("cosh");
-							else
-								doOperation("cos");
-						}
+						else if (angle.equals("degree")) 
+							doOperation("cosd");
+						
+						else 
+						    doOperation("cos");
+						
 						label.setText("cos("+String.valueOf(firstNum)+")");
 						
 					}
@@ -694,20 +685,15 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						firstNum=getNum();
 						
-		
-						if (angle.equals("degree")) {
-							if (type.equals("hyperbole"))
-								doOperation("tandh");
-							else
-								doOperation("tand");
-						}
+						if (type.equals("hyperbole")) 
+							doOperation("tanh");
 						
-						else {
-							if (type.equals("hyperbole")) 
-								doOperation("tanh");
-							else
-								doOperation("tan");
-						}
+						else if (angle.equals("degree")) 
+							doOperation("tand");
+						
+						else 
+						    doOperation("tan");
+						
 						label.setText("tan("+String.valueOf(firstNum)+")");
 						
 					}
