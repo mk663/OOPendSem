@@ -24,7 +24,7 @@ public class scientificCalculator extends trigonometry{
 	static int inc;
 	
 	//ArrayLists
-	ArrayList<String> previousNum = new ArrayList<String>();
+	ArrayList<Double> previousNum = new ArrayList<Double>();
 	ArrayList<JButton> opNow = new ArrayList<JButton>(); 
 	
 	/**
@@ -603,12 +603,11 @@ public class scientificCalculator extends trigonometry{
 					public void actionPerformed(ActionEvent e) {
 						
 						if(inc>=0) {
-							if (inc==previousNum.size()) {}
-							else {
-								firstNum=Double.parseDouble(previousNum.get(inc));
-								secondNum=getNum();
-								doOperation(opNow.get(inc));
-							}
+							
+							firstNum=(previousNum.get(inc));
+							secondNum=getNum();
+							doOperation(opNow.get(inc));
+							
 							inc-=1;
 							label.setText(")");
 						}
@@ -630,12 +629,12 @@ public class scientificCalculator extends trigonometry{
 							
 							if(op==null || label.getText().equals("(")) {
 						    	opNow.add(button_Add);
-							    previousNum.add(String.valueOf(0));
+							    previousNum.add(0.0);
 						    }
 							
 						    else {
 							    opNow.add(op);
-						        previousNum.add(String.valueOf(firstNum));
+						        previousNum.add(firstNum);
 						    }
 						    inc=previousNum.size()-1;
 						    label.setText("(");

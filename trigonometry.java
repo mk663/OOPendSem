@@ -81,7 +81,6 @@ class trigonometry extends arithmetic {
 				result=Math.tanh(firstNum);
 			break;
 
-			
 		}	
 		
 		textField.setText(String.valueOf(result));
